@@ -27,6 +27,7 @@
 		16C5A7D327FA6021004BD0D5 /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D227FA6021004BD0D5 /* TaskCellViewModel.swift */; };
 		16C5A7D527FA60BA004BD0D5 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D427FA60BA004BD0D5 /* TasksView.swift */; };
 		16C5A7D727FA6156004BD0D5 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D627FA6156004BD0D5 /* TaskCellView.swift */; };
+		16C5A7D927FAA05B004BD0D5 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D827FAA05B004BD0D5 /* NewTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		16C5A7D227FA6021004BD0D5 /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
 		16C5A7D427FA60BA004BD0D5 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		16C5A7D627FA6156004BD0D5 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
+		16C5A7D827FAA05B004BD0D5 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				16C5A7D627FA6156004BD0D5 /* TaskCellView.swift */,
 				16C5A7D427FA60BA004BD0D5 /* TasksView.swift */,
+				16C5A7D827FAA05B004BD0D5 /* NewTaskView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				168A5BEB27FA51DD00BA87FF /* ContentView.swift in Sources */,
 				16C5A7D327FA6021004BD0D5 /* TaskCellViewModel.swift in Sources */,
+				16C5A7D927FAA05B004BD0D5 /* NewTaskView.swift in Sources */,
 				16C5A7CD27FA577E004BD0D5 /* Task.swift in Sources */,
 				16C5A7D727FA6156004BD0D5 /* TaskCellView.swift in Sources */,
 				16C5A7D527FA60BA004BD0D5 /* TasksView.swift in Sources */,

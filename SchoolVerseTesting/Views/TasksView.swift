@@ -11,6 +11,8 @@ import SwiftUI
 struct TasksView: View {
     @ObservedObject var taskListVM = TaskListViewModel()
     
+    @State private var showAddTaskView: Bool = false
+    
     @State var showNewTaskView: Bool = false
     
     var body: some View {
@@ -22,13 +24,17 @@ struct TasksView: View {
                 }
             }
         }
+        .sheet(isPresented: $showAddTaskView, content: {
+            NavigationView {
+                NewTaskView(taskListVM: taskListVM)
+            }
+        })
         .toolbar(content: {
             Button {
-                print("hello")
+                showAddTaskView.toggle()
             } label: {
                 Label("New", systemImage: "plus")
             }
-
         })
         .navigationTitle("Tasks")
         .listStyle(.sidebar)
