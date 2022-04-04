@@ -21,6 +21,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct SchoolVerseTestingApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     var body: some Scene {
         WindowGroup {
             ContentView()
