@@ -9,6 +9,8 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+// TODO: Add colors, group courses together (probably make course a struct
+
 struct Task: Codable, Identifiable {
     @DocumentID var id: String?
     var name: String
