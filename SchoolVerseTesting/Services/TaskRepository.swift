@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 import Combine
 
 // further reference: https://peterfriese.dev/posts/firestore-codable-the-comprehensive-guide/
+// NOT PRODUCTION READY! (need user authentication)
 
 class TaskRepository: ObservableObject {
     private let path: String = "TASKS"
@@ -81,6 +82,17 @@ class TaskRepository: ObservableObject {
                 try docRef.setData(from: task)
             } catch {
                 errorMessage = error.localizedDescription
+            }
+        }
+    }
+    
+    func removeTask(_ task: Task) {
+        guard let id = task.id else { return }
+        let docRef = db.collection(path).document(id)
+        
+        docRef.delete { error in
+            if let error = error {
+                self.errorMessage = error.localizedDescription
             }
         }
     }

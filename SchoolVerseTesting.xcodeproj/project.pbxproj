@@ -22,6 +22,11 @@
 		168A5C2327FA543C00BA87FF /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 168A5C2227FA543C00BA87FF /* FirebaseFirestoreCombine-Community */; };
 		168A5C2527FA543C00BA87FF /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 168A5C2427FA543C00BA87FF /* FirebaseFirestoreSwift-Beta */; };
 		16C5A7CD27FA577E004BD0D5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7CC27FA577E004BD0D5 /* Task.swift */; };
+		16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7CE27FA5CEE004BD0D5 /* TaskRepository.swift */; };
+		16C5A7D127FA6000004BD0D5 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D027FA6000004BD0D5 /* TaskListViewModel.swift */; };
+		16C5A7D327FA6021004BD0D5 /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D227FA6021004BD0D5 /* TaskCellViewModel.swift */; };
+		16C5A7D527FA60BA004BD0D5 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D427FA60BA004BD0D5 /* TaskCellView.swift */; };
+		16C5A7D727FA6156004BD0D5 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D627FA6156004BD0D5 /* TasksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		168A5C0527FA51DF00BA87FF /* SchoolVerseTestingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolVerseTestingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		168A5C1727FA53ED00BA87FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16C5A7CC27FA577E004BD0D5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		16C5A7CE27FA5CEE004BD0D5 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		16C5A7D027FA6000004BD0D5 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		16C5A7D227FA6021004BD0D5 /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		16C5A7D427FA60BA004BD0D5 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
+		16C5A7D627FA6156004BD0D5 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +169,8 @@
 		168A5C1427FA52FF00BA87FF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				16C5A7D027FA6000004BD0D5 /* TaskListViewModel.swift */,
+				16C5A7D227FA6021004BD0D5 /* TaskCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -166,6 +178,8 @@
 		168A5C1527FA530500BA87FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				16C5A7D427FA60BA004BD0D5 /* TaskCellView.swift */,
+				16C5A7D627FA6156004BD0D5 /* TasksView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 		168A5C1627FA532300BA87FF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				16C5A7CE27FA5CEE004BD0D5 /* TaskRepository.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -320,7 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				168A5BEB27FA51DD00BA87FF /* ContentView.swift in Sources */,
+				16C5A7D327FA6021004BD0D5 /* TaskCellViewModel.swift in Sources */,
 				16C5A7CD27FA577E004BD0D5 /* Task.swift in Sources */,
+				16C5A7D727FA6156004BD0D5 /* TasksView.swift in Sources */,
+				16C5A7D527FA60BA004BD0D5 /* TaskCellView.swift in Sources */,
+				16C5A7D127FA6000004BD0D5 /* TaskListViewModel.swift in Sources */,
+				16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */,
 				168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
