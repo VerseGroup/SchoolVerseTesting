@@ -34,10 +34,19 @@ class TaskCellViewModel: ObservableObject, Identifiable {
                 self?.id = id
             }
             .store(in: &cancellables)
+        
+        // updates task when event happens
+        $task
+            .dropFirst()
+            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .sink { task in
+                self.updateTask()
+            }
+            .store(in: &cancellables)
     }
     
     func updateTask() {
-        repo.removeTask(task)
+        repo.updateTask(task)
     }
     
     func removeTask() {

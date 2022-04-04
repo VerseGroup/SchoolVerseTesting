@@ -22,6 +22,14 @@ struct TasksView: View {
                 }
             }
         }
+        .toolbar(content: {
+            Button {
+                print("hello")
+            } label: {
+                Label("New", systemImage: "plus")
+            }
+
+        })
         .navigationTitle("Tasks")
         .listStyle(.sidebar)
     }

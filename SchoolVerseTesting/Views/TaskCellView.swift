@@ -7,21 +7,29 @@
 
 import SwiftUI
 
+// TODO: add date picker
 struct TaskCellView: View {
-    var taskCellVM: TaskCellViewModel
+    @ObservedObject var taskCellVM: TaskCellViewModel
     
     var body: some View {
         HStack() {
             Image(systemName: taskCellVM.task.completed ? "checkmark.circle.fill" : "circle")
+                .onTapGesture {
+                    withAnimation(.easeIn) {
+                        self.taskCellVM.task.completed.toggle()
+                    }
+                }
             
             Spacer()
             
             VStack(alignment: .leading) {
-                Text(taskCellVM.task.name)
+                TextField("Enter task title", text: $taskCellVM.task.name)
                     .font(.headline)
-                    .bold()
-                Text(taskCellVM.task.description)
+                
+                TextField("Enter description", text: $taskCellVM.task.description)
                     .font(.subheadline)
+                
+                // change to date picker
                 Text(taskCellVM.task.dueDate.description)
             }
         }
