@@ -9,11 +9,15 @@ import SwiftUI
 
 // TODO: implement choosing a course (probably an array)
 // TODO: add error checking to make sure task is not empty
+
+// NOTE: view deinitializes when dismissed
 struct NewTaskView: View {
     @ObservedObject var taskListVM: TaskListViewModel
     @State var newTask: Task = Task(id: nil, name: "", completed: false, dueDate: Date.now, description: "", courseId: "", courseName: "", userId: nil)
     
-    @Environment(\.presentationMode) var presentationMode
+    // replaces presentationMode
+    // source: https://developer.apple.com/documentation/swiftui/environmentvalues/dismiss
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         List {
@@ -37,7 +41,7 @@ struct NewTaskView: View {
             Section() {
                 Button() {
                     taskListVM.addTask(task: newTask)
-                    presentationMode.wrappedValue.dismiss()
+                    dismiss()
                 } label: {
                     Text("Add Task")
                         .bold()

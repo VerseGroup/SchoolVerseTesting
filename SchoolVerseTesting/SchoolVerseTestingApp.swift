@@ -22,10 +22,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct SchoolVerseTestingApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    // single source of truth, singleton
+    @StateObject var authenticationService: AuthenticationService = AuthenticationService.instance
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // replace following code with separate routerview
+            NavigationView {
+                if authenticationService.isAuthenticated {
+                    TasksView()
+                } else {
+                    AuthenticationView()
+                }
+            }
+            .environmentObject(authenticationService)
         }
     }
 }
