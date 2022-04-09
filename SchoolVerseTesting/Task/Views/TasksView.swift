@@ -44,7 +44,7 @@ struct TasksView: View {
         .listStyle(.sidebar)
         .sheet(isPresented: $showAddTaskView, content: {
             NavigationView {
-                NewTaskView(taskListVM: taskListVM)
+                AddTaskView()
             }
         })
         .sheet(isPresented: $showAccountView) {

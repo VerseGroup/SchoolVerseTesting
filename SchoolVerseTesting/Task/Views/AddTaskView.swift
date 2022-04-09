@@ -1,5 +1,5 @@
 //
-//  NewTaskView.swift
+//  AddTaskView.swift
 //  SchoolVerseTesting
 //
 //  Created by Steven Yu on 4/3/22.
@@ -11,9 +11,8 @@ import SwiftUI
 // TODO: add error checking to make sure task is not empty
 
 // NOTE: view deinitializes when dismissed
-struct NewTaskView: View {
-    @ObservedObject var taskListVM: TaskListViewModel
-    @State var newTask: SchoolTask = SchoolTask(id: nil, name: "", completed: false, dueDate: Date.now, description: "", courseId: "", courseName: "", userId: nil)
+struct AddTaskView: View {
+    @ObservedObject var vm: AddTaskViewModel = AddTaskViewModel()
     
     // replaces presentationMode
     // source: https://developer.apple.com/documentation/swiftui/environmentvalues/dismiss
@@ -22,31 +21,32 @@ struct NewTaskView: View {
     var body: some View {
         List {
             Section(header: Text("Task Details")) {
-                TextField("Enter a task name", text: $newTask.name)
-                TextField("Enter a task description", text: $newTask.description)
-                DatePicker("Due Date", selection: $newTask.dueDate, displayedComponents: [.date, .hourAndMinute])
-                Toggle(isOn: $newTask.completed) {
+                TextField("Enter a task name", text: $vm.newTask.name)
+                TextField("Enter a task description", text: $vm.newTask.description)
+                DatePicker("Due Date", selection: $vm.newTask.dueDate, displayedComponents: [.date, .hourAndMinute])
+                Toggle(isOn: $vm.newTask.completed) {
                     Text("Finished")
                 }
             }
             
             // change to a picker that chooses from user's array
             Section(header: Text("Course Details")) {
-                TextField("Enter a course name", text: $newTask.courseName)
-                TextField("Enter a course ID", text: $newTask.courseId)
+                TextField("Enter a course name", text: $vm.newTask.courseName)
+                TextField("Enter a course ID", text: $vm.newTask.courseId)
             }
             
             // change to viewmodifier later
             // source: https://stackoverflow.com/questions/56692933/swiftui-centre-content-on-a-list
             Section() {
                 Button() {
-                    taskListVM.addTask(task: newTask)
+                    vm.addTask()
                     dismiss()
                 } label: {
                     Text("Add Task")
                         .bold()
                         .frame(maxWidth: .infinity)
                 }
+                .disabled(!self.vm.isValid)
                 .tint(.purple) // change to custom color scheme later
                 .controlSize(.large)
                 .buttonStyle(.borderedProminent)
@@ -59,8 +59,8 @@ struct NewTaskView: View {
     }
 }
 
-struct NewTaskView_Previews: PreviewProvider {
+struct AddTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        NewTaskView(taskListVM: TaskListViewModel())
+        AddTaskView()
     }
 }
