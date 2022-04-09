@@ -20,8 +20,9 @@ struct TasksView: View {
         VStack(alignment: .leading) {
             List {
                 ForEach(taskListVM.taskCellViewModels) { taskCellVM in
-                    TaskCellView(taskCellVM: taskCellVM)
+                    TaskCellView(vm: taskCellVM)
                         .listRowBackground(EmptyView())
+                        .listRowSeparator(.hidden)
                 }
             }
         }

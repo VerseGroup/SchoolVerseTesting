@@ -19,6 +19,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   }
 }
 
+// TODO: IMPLEMENT CLASS FUNCTION AND SELECTION
 @main
 struct SchoolVerseTestingApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate

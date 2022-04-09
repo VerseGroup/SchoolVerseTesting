@@ -9,39 +9,51 @@ import SwiftUI
 
 // TODO: add date picker
 struct TaskCellView: View {
-    @StateObject var taskCellVM: TaskCellViewModel
+    @ObservedObject var vm: TaskCellViewModel
+    @State var showTaskDetailView: Bool = false
     
     var body: some View {
-        HStack() {
-            Image(systemName: taskCellVM.task.completed ? "checkmark.circle.fill" : "circle")
+        HStack(spacing: 10) {
+            Image(systemName: vm.task.completed ? "checkmark.circle.fill" : "circle")
                 .onTapGesture {
                     withAnimation(.easeIn) {
-                        self.taskCellVM.task.completed.toggle()
+                        self.vm.task.completed.toggle()
                     }
                 }
             
-            Spacer()
-            
             VStack(alignment: .leading) {
-                TextField("Enter task title", text: $taskCellVM.task.name)
+                Text(vm.task.name)
                     .font(.headline)
                 
-                TextField("Enter description", text: $taskCellVM.task.description)
+                Text(vm.task.description)
                     .font(.subheadline)
+                    .lineLimit(2)
                 
-                // change to date picker
-                Text(taskCellVM.task.dueDate.description)
+                // change to date
+                Text(vm.task.dueDate.asFormattedDateString())
             }
+            .onTapGesture {
+                showTaskDetailView.toggle()
+            }
+            
+            Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.accentColor)
         .cornerRadius(10)
+        .sheet(isPresented: $showTaskDetailView) {
+            NavigationView {
+                TaskDetailView(vm: vm)
+            }
+        }
     }
 }
 
 struct TaskCellView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskCellView(taskCellVM: TaskCellViewModel(task: SchoolTask(id: "0", name: "test", completed: false, dueDate: Date.now, description: "description", courseId: "course id", courseName: "calculus", userId: "0")))
+        NavigationView {
+        TaskCellView(vm: TaskCellViewModel(task: SchoolTask(id: "0", name: "test", completed: false, dueDate: Date.now, description: "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription", courseId: "course id", courseName: "calculus", userId: "0")))
+        }
     }
 }
