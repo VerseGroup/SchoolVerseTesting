@@ -8,8 +8,40 @@
 import SwiftUI
 
 struct AuthenticationView: View {
+    @State var showSignInView: Bool = false
+    @State var showSignUpView: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button {
+                showSignInView.toggle()
+            } label: {
+                Text("Sign In")
+                    .bold()
+                    .frame(maxWidth: .infinity)
+            }
+            .tint(.purple) // change to custom color scheme later
+            .controlSize(.large)
+            .buttonStyle(.borderedProminent)
+            
+            Button {
+                showSignUpView.toggle()
+            } label: {
+                Text("Sign Up")
+                    .bold()
+                    .frame(maxWidth: .infinity)
+            }
+            .tint(.purple) // change to custom color scheme later
+            .controlSize(.large)
+            .buttonStyle(.borderedProminent)
+
+        }
+        .sheet(isPresented: $showSignInView) {
+            SignInView()
+        }
+        .sheet(isPresented: $showSignUpView) {
+            SignUpView()
+        }
     }
 }
 

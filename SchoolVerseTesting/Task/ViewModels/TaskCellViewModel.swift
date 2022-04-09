@@ -11,13 +11,13 @@ import Combine
 // might need icon name
 class TaskCellViewModel: ObservableObject, Identifiable {
     private let repo = TaskRepository()
-    @Published var task: Task
+    @Published var task: SchoolTask
     
     var id: String = ""
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(task: Task) {
+    init(task: SchoolTask) {
         self.task = task
         
         addSubscribers()

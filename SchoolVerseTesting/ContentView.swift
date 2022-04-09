@@ -9,7 +9,6 @@ import SwiftUI
 
 // this is just a test view, will prob be replaced by a router view
 
-
 struct ContentView: View {
     @ObservedObject var repo = TaskRepository()
     

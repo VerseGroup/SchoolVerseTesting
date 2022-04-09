@@ -13,8 +13,7 @@ struct TasksView: View {
     @ObservedObject var taskListVM = TaskListViewModel()
     
     @State private var showAddTaskView: Bool = false
-    
-    @State var showNewTaskView: Bool = false
+    @State private var showAccountView: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,20 +24,33 @@ struct TasksView: View {
                 }
             }
         }
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
+                    Button {
+                        showAccountView.toggle()
+                    } label: {
+                        Label("Account", systemImage: "person.crop.circle")
+                    }
+                
+                    Button {
+                        showAddTaskView.toggle()
+                    } label: {
+                        Label("New", systemImage: "plus")
+                    }
+            }
+        }
+        .navigationTitle("Tasks")
+        .listStyle(.sidebar)
         .sheet(isPresented: $showAddTaskView, content: {
             NavigationView {
                 NewTaskView(taskListVM: taskListVM)
             }
         })
-        .toolbar(content: {
-            Button {
-                showAddTaskView.toggle()
-            } label: {
-                Label("New", systemImage: "plus")
+        .sheet(isPresented: $showAccountView) {
+            NavigationView {
+                AccountView()
             }
-        })
-        .navigationTitle("Tasks")
-        .listStyle(.sidebar)
+        }
     }
 }
 

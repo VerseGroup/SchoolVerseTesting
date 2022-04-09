@@ -29,11 +29,7 @@ struct SchoolVerseTestingApp: App {
         WindowGroup {
             // replace following code with separate routerview
             NavigationView {
-                if authenticationService.isAuthenticated {
-                    TasksView()
-                } else {
-                    AuthenticationView()
-                }
+                RouterView()
             }
             .environmentObject(authenticationService)
         }

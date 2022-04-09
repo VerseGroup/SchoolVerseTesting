@@ -43,7 +43,7 @@ class TaskListViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func addTask(task: Task) {
+    func addTask(task: SchoolTask) {
         repo.addTask(task)
     }
 }

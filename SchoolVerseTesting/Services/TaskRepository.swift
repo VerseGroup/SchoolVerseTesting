@@ -18,7 +18,7 @@ class TaskRepository: ObservableObject {
     private let path: String = "TASKS"
     private let db = Firestore.firestore()
     
-    @Published var tasks: [Task] = []
+    @Published var tasks: [SchoolTask] = []
     @Published var errorMessage: String?
     
     init() {
@@ -37,7 +37,7 @@ class TaskRepository: ObservableObject {
                     return
                 }
                 self?.tasks = documents.compactMap({ queryDocumentSnapshot in
-                    let result = Result { try queryDocumentSnapshot.data(as: Task.self) }
+                    let result = Result { try queryDocumentSnapshot.data(as: SchoolTask.self) }
                     
                     switch result {
                     case .success(let task):
@@ -63,7 +63,7 @@ class TaskRepository: ObservableObject {
             }
     }
     
-    func addTask(_ task: Task) {
+    func addTask(_ task: SchoolTask) {
         let collectionRef = db.collection(path)
         do {
             var userTask = task
@@ -75,7 +75,7 @@ class TaskRepository: ObservableObject {
         }
     }
     
-    func updateTask(_ task: Task) {
+    func updateTask(_ task: SchoolTask) {
         if let id = task.id {
             let docRef = db.collection(path).document(id)
             do {
@@ -86,7 +86,7 @@ class TaskRepository: ObservableObject {
         }
     }
     
-    func removeTask(_ task: Task) {
+    func removeTask(_ task: SchoolTask) {
         guard let id = task.id else { return }
         let docRef = db.collection(path).document(id)
         

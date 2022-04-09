@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 
 // TODO: Add colors, group courses together (probably make course a struct)
 
-struct Task: Codable, Identifiable {
+struct SchoolTask: Codable, Identifiable {
     @DocumentID var id: String?
     var name: String
     var completed: Bool
