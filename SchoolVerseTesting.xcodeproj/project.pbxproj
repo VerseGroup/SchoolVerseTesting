@@ -14,7 +14,6 @@
 		167C0C9527FBF35900C99B43 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9427FBF35900C99B43 /* SignInView.swift */; };
 		167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9627FBF35F00C99B43 /* SignUpView.swift */; };
 		168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168A5BE827FA51DD00BA87FF /* SchoolVerseTestingApp.swift */; };
-		168A5BEB27FA51DD00BA87FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168A5BEA27FA51DD00BA87FF /* ContentView.swift */; };
 		168A5BED27FA51DF00BA87FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168A5BEC27FA51DF00BA87FF /* Assets.xcassets */; };
 		168A5BF027FA51DF00BA87FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168A5BEF27FA51DF00BA87FF /* Preview Assets.xcassets */; };
 		168A5BFA27FA51DF00BA87FF /* SchoolVerseTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168A5BF927FA51DF00BA87FF /* SchoolVerseTestingTests.swift */; };
@@ -63,7 +62,6 @@
 		167C0C9627FBF35F00C99B43 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		168A5BE527FA51DD00BA87FF /* SchoolVerseTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolVerseTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168A5BE827FA51DD00BA87FF /* SchoolVerseTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolVerseTestingApp.swift; sourceTree = "<group>"; };
-		168A5BEA27FA51DD00BA87FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		168A5BEC27FA51DF00BA87FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		168A5BEF27FA51DF00BA87FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		168A5BF527FA51DF00BA87FF /* SchoolVerseTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolVerseTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +172,6 @@
 				167C0C8F27FBEE7B00C99B43 /* New Group */,
 				168A5BE827FA51DD00BA87FF /* SchoolVerseTestingApp.swift */,
 				160A624428007763005AD088 /* RouterView.swift */,
-				168A5BEA27FA51DD00BA87FF /* ContentView.swift */,
 				168A5C1627FA532300BA87FF /* Services */,
 				168A5C1227FA52F500BA87FF /* Models */,
 				167C0C8B27FB4F7F00C99B43 /* Task */,
@@ -390,7 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				168A5BEB27FA51DD00BA87FF /* ContentView.swift in Sources */,
 				16C5A7D327FA6021004BD0D5 /* TaskCellViewModel.swift in Sources */,
 				167C0C9127FBEE8A00C99B43 /* AuthenticationView.swift in Sources */,
 				16C5A7D927FAA05B004BD0D5 /* NewTaskView.swift in Sources */,

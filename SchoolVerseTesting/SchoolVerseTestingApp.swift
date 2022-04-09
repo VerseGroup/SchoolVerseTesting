@@ -27,7 +27,6 @@ struct SchoolVerseTestingApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // replace following code with separate routerview
             NavigationView {
                 RouterView()
             }

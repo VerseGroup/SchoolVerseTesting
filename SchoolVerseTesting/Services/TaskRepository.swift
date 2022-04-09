@@ -12,8 +12,7 @@ import FirebaseFirestoreSwift
 import Combine
 
 // further reference: https://peterfriese.dev/posts/firestore-codable-the-comprehensive-guide/
-// NOT PRODUCTION READY! (need user authentication)
-
+// TODO: ADD DEBOUNCE TO FIREBASE
 class TaskRepository: ObservableObject {
     private let path: String = "TASKS"
     private let db = Firestore.firestore()
@@ -26,11 +25,10 @@ class TaskRepository: ObservableObject {
     }
     
     func loadTasks() {
-        let userId: String = "0" // test userId, remove later
-        // let userId = Auth.auth().currentUser?.uid
+        let userId = Auth.auth().currentUser?.uid
         
         db.collection(path)
-        //  .where("userId", isEqualTo: userId)
+            .whereField("user_id", isEqualTo: userId)
             .addSnapshotListener { [weak self] (querySnapshot, error) in
                 guard let documents = querySnapshot?.documents else {
                     self?.errorMessage = "No tasks yet"
@@ -67,7 +65,7 @@ class TaskRepository: ObservableObject {
         let collectionRef = db.collection(path)
         do {
             var userTask = task
-            // userTask.userId = Auth.auth().currentUser?.uid
+            userTask.userId = Auth.auth().currentUser?.uid
             let newDocReference = try collectionRef.addDocument(from: userTask)
             print("Task stored with new document reference: \(newDocReference)")
         } catch {
