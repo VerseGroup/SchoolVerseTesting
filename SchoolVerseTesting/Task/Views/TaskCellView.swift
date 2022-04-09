@@ -9,7 +9,7 @@ import SwiftUI
 
 // TODO: add date picker
 struct TaskCellView: View {
-    @ObservedObject var taskCellVM: TaskCellViewModel
+    @StateObject var taskCellVM: TaskCellViewModel
     
     var body: some View {
         HStack() {

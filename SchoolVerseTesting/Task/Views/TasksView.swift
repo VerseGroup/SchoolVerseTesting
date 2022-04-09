@@ -10,7 +10,8 @@ import SwiftUI
 // TODO: in the production app, add DI in tasklistvm, so you can add a dummy test data cell taskrepo
 // TODO: implement moving and deleting
 struct TasksView: View {
-    @ObservedObject var taskListVM = TaskListViewModel()
+    // ensures screen doesn't blink
+    @StateObject var taskListVM = TaskListViewModel()
     
     @State private var showAddTaskView: Bool = false
     @State private var showAccountView: Bool = false

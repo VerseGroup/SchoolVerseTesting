@@ -211,6 +211,7 @@
 		168A5C1227FA52F500BA87FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				16C5A7CC27FA577E004BD0D5 /* SchoolTask.swift */,
 				167C0C8D27FB531500C99B43 /* CredentialDetails.swift */,
 			);
 			path = Models;
@@ -229,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				16C5A7D627FA6156004BD0D5 /* TaskCellView.swift */,
-				16C5A7CC27FA577E004BD0D5 /* SchoolTask.swift */,
 				16C5A7D427FA60BA004BD0D5 /* TasksView.swift */,
 				16C5A7D827FAA05B004BD0D5 /* NewTaskView.swift */,
 			);

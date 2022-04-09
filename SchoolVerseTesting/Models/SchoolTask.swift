@@ -11,6 +11,17 @@ import FirebaseFirestoreSwift
 
 // TODO: Add colors, group courses together (probably make course a struct)
 
+// might add platform info, not really needed
+//struct PlatformInformation: Codable {
+//    var assignmentCode: String
+//    var platformCode: String
+//
+//    enum CodingKeys: String, CodingKey {
+//        case assignmentCode = "assignment_code"
+//        case platformCode = "platform_code"
+//    }
+//}
+
 struct SchoolTask: Codable, Identifiable {
     @DocumentID var id: String?
     var name: String
@@ -21,6 +32,7 @@ struct SchoolTask: Codable, Identifiable {
     var courseId: String
     var courseName: String
     
+//    var platformInformation: PlatformInformation
     var userId: String?
     
     enum CodingKeys: String, CodingKey {
@@ -33,6 +45,7 @@ struct SchoolTask: Codable, Identifiable {
         case courseId = "course_id"
         case courseName = "course_name"
         
+//        case platformInformation = "platform_information"
         case userId = "user_id"
     }
 }
