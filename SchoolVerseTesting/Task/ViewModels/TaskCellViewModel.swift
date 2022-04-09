@@ -38,7 +38,7 @@ class TaskCellViewModel: ObservableObject, Identifiable {
         // updates task when event happens
         $task
             .dropFirst()
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 5, scheduler: RunLoop.main) // ensures changes aren't published immediately, have to wait 5 seconds
             .sink { task in
                 self.updateTask()
             }
