@@ -13,6 +13,11 @@
 		167C0C9127FBEE8A00C99B43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */; };
 		167C0C9527FBF35900C99B43 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9427FBF35900C99B43 /* SignInView.swift */; };
 		167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9627FBF35F00C99B43 /* SignUpView.swift */; };
+		1687BB932810DA8300B512B8 /* MenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB922810DA8300B512B8 /* MenusView.swift */; };
+		1687BB952810DB2100B512B8 /* MenuCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB942810DB2100B512B8 /* MenuCellView.swift */; };
+		1687BB972810DB2800B512B8 /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB962810DB2800B512B8 /* MenuDetailView.swift */; };
+		1687BB992810E2D300B512B8 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB982810E2D300B512B8 /* FoodView.swift */; };
+		1687BB9B2810F11700B512B8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB9A2810F11700B512B8 /* HomeView.swift */; };
 		168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168A5BE827FA51DD00BA87FF /* SchoolVerseTestingApp.swift */; };
 		168A5BED27FA51DF00BA87FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168A5BEC27FA51DF00BA87FF /* Assets.xcassets */; };
 		168A5BF027FA51DF00BA87FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168A5BEF27FA51DF00BA87FF /* Preview Assets.xcassets */; };
@@ -39,6 +44,7 @@
 		16D7711C2802046D007E9424 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7711B2802046D007E9424 /* Menu.swift */; };
 		16D7711E28020737007E9424 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7711D28020737007E9424 /* TaskDetailView.swift */; };
 		16D7712128020D14007E9424 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7712028020D14007E9424 /* Date.swift */; };
+		16E05855280EF2AF0050A555 /* MenuListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E05854280EF2AF0050A555 /* MenuListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,11 @@
 		167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		167C0C9427FBF35900C99B43 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		167C0C9627FBF35F00C99B43 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1687BB922810DA8300B512B8 /* MenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusView.swift; sourceTree = "<group>"; };
+		1687BB942810DB2100B512B8 /* MenuCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellView.swift; sourceTree = "<group>"; };
+		1687BB962810DB2800B512B8 /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
+		1687BB982810E2D300B512B8 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		1687BB9A2810F11700B512B8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		168A5BE527FA51DD00BA87FF /* SchoolVerseTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolVerseTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168A5BE827FA51DD00BA87FF /* SchoolVerseTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolVerseTestingApp.swift; sourceTree = "<group>"; };
 		168A5BEC27FA51DF00BA87FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +99,7 @@
 		16D7711B2802046D007E9424 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		16D7711D28020737007E9424 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		16D7712028020D14007E9424 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		16E05854280EF2AF0050A555 /* MenuListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +195,11 @@
 				16D7711F28020D07007E9424 /* Extensions */,
 				168A5BE827FA51DD00BA87FF /* SchoolVerseTestingApp.swift */,
 				160A624428007763005AD088 /* RouterView.swift */,
+				1687BB9A2810F11700B512B8 /* HomeView.swift */,
 				168A5C1627FA532300BA87FF /* Services */,
 				168A5C1227FA52F500BA87FF /* Models */,
 				167C0C8B27FB4F7F00C99B43 /* Task */,
+				16E05851280EF2700050A555 /* Menu */,
 				167C0C8C27FB4FAF00C99B43 /* Authentication */,
 				168A5BEC27FA51DF00BA87FF /* Assets.xcassets */,
 				168A5C1727FA53ED00BA87FF /* GoogleService-Info.plist */,
@@ -222,8 +236,8 @@
 		168A5C1227FA52F500BA87FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				16C5A7CC27FA577E004BD0D5 /* SchoolTask.swift */,
 				167C0C8D27FB531500C99B43 /* CredentialDetails.swift */,
+				16C5A7CC27FA577E004BD0D5 /* SchoolTask.swift */,
 				16D7711B2802046D007E9424 /* Menu.swift */,
 			);
 			path = Models;
@@ -266,6 +280,34 @@
 				16D7712028020D14007E9424 /* Date.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		16E05851280EF2700050A555 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				16E05852280EF2800050A555 /* ViewModels */,
+				16E05853280EF2850050A555 /* Views */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		16E05852280EF2800050A555 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				16E05854280EF2AF0050A555 /* MenuListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		16E05853280EF2850050A555 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1687BB922810DA8300B512B8 /* MenusView.swift */,
+				1687BB942810DB2100B512B8 /* MenuCellView.swift */,
+				1687BB962810DB2800B512B8 /* MenuDetailView.swift */,
+				1687BB982810E2D300B512B8 /* FoodView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,22 +454,28 @@
 			files = (
 				16C5A7D327FA6021004BD0D5 /* TaskCellViewModel.swift in Sources */,
 				167C0C9127FBEE8A00C99B43 /* AuthenticationView.swift in Sources */,
+				16E05855280EF2AF0050A555 /* MenuListViewModel.swift in Sources */,
 				16D7711A2802044F007E9424 /* MenuRepository.swift in Sources */,
 				16C5A7D927FAA05B004BD0D5 /* AddTaskView.swift in Sources */,
 				16D771162801D3DE007E9424 /* AccountView.swift in Sources */,
+				1687BB992810E2D300B512B8 /* FoodView.swift in Sources */,
 				167C0C8E27FB531500C99B43 /* CredentialDetails.swift in Sources */,
 				16D7711C2802046D007E9424 /* Menu.swift in Sources */,
 				16C5A7CD27FA577E004BD0D5 /* SchoolTask.swift in Sources */,
 				16C5A7D727FA6156004BD0D5 /* TaskCellView.swift in Sources */,
 				16C5A7D527FA60BA004BD0D5 /* TasksView.swift in Sources */,
+				1687BB972810DB2800B512B8 /* MenuDetailView.swift in Sources */,
 				16C5A7D127FA6000004BD0D5 /* TaskListViewModel.swift in Sources */,
 				16D7712128020D14007E9424 /* Date.swift in Sources */,
+				1687BB9B2810F11700B512B8 /* HomeView.swift in Sources */,
+				1687BB932810DA8300B512B8 /* MenusView.swift in Sources */,
 				16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */,
 				16D771182801F0F9007E9424 /* AddTaskViewModel.swift in Sources */,
 				167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */,
 				168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */,
 				167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */,
 				16D7711E28020737007E9424 /* TaskDetailView.swift in Sources */,
+				1687BB952810DB2100B512B8 /* MenuCellView.swift in Sources */,
 				167C0C9527FBF35900C99B43 /* SignInView.swift in Sources */,
 				160A624528007763005AD088 /* RouterView.swift in Sources */,
 			);

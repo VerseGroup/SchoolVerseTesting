@@ -30,7 +30,7 @@ struct TaskCellView: View {
                     .lineLimit(2)
                 
                 // change to date
-                Text(vm.task.dueDate.asFormattedDateString())
+                Text(vm.task.dueDate.weekDateTimeString())
             }
             .onTapGesture {
                 showTaskDetailView.toggle()

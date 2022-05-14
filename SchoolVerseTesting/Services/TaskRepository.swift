@@ -42,7 +42,6 @@ class TaskRepository: ObservableObject {
                         self?.errorMessage = nil
                         return task
                     case .failure(let error):
-                        // A Book value could not be initialized from the DocumentSnapshot.
                         switch error {
                         case DecodingError.typeMismatch(_, let context):
                             self?.errorMessage = "\(error.localizedDescription): \(context.debugDescription)"
