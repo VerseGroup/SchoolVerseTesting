@@ -13,7 +13,7 @@ import FirebaseFirestoreSwift
 
 // make sure to edit for next year's schedule
 struct DayEvent: Codable, Identifiable {
-    var id: String // custom id, not Firebase generated @DocumentId
+    var id: String // custom id, not Firebase generated @DocumentID
     var date: Date
     var day: Day
 }
@@ -51,7 +51,7 @@ extension Day {
         case .daySeven:
             return 7
         case .failed:
-            return 0
+            return -1
         }
     }
     
