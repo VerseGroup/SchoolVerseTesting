@@ -43,6 +43,12 @@ struct DaySchedule: Codable, Comparable {
     }
 }
 
+// to ensure ForEach loop works
+struct UniquePeriodInfo: Identifiable {
+    var id = UUID()
+    var period: PeriodInfo
+}
+
 struct PeriodInfo: Codable, Comparable {
     var period: Period
     var className: String

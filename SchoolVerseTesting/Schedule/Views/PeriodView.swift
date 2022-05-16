@@ -11,7 +11,7 @@ struct PeriodView: View {
     var period: PeriodInfo
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(period.period.description)
             VStack(alignment: .leading) {
                 Text(period.startTime)
@@ -22,6 +22,10 @@ struct PeriodView: View {
                     Spacer()
                 }
             }
+            .padding()
+            .foregroundColor(Color.white)
+            .background(Color.purple)
+            .cornerRadius(5)
         }
     }
 }

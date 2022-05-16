@@ -58,8 +58,14 @@ struct ScheduleView: View {
                     if let daySchedule = vm.schedule?.days.first(where: { daySchedule in
                         vm.selectedDayEvent?.day == daySchedule.day
                     }) {
-                        ForEach(daySchedule.periods) { period in
-                            PeriodView(
+                        // ensures ForEach works since PeriodInfo is not unique, but ForEach requires unique
+                        ForEach(
+                            // converting PeriodInfo to UniquePeriodInfo
+                            daySchedule.periods.compactMap({ period in
+                                UniquePeriodInfo(period: period)
+                            })
+                        ) { uniquePeriod in
+                            PeriodView(period: uniquePeriod.period)
                         }
                     }
                 }
