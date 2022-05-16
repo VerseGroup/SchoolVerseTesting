@@ -10,6 +10,7 @@ import Firebase
 import FirebaseFirestoreSwift
 
 
+// make sure to edit for next year's schedule
 struct Schedule: Codable, Identifiable {
     @DocumentID var id: String?
     var days: [DaySchedule] {
