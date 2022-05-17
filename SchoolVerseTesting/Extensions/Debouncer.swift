@@ -7,8 +7,7 @@
 
 import Foundation
 
-//source: https://betterprogramming.pub/implement-a-debouncer-in-swift-3b5c775f90b8
-
+// source: https://betterprogramming.pub/implement-a-debouncer-in-swift-3b5c775f90b8
 public class Debouncer {
     
     private let timeInterval: TimeInterval
