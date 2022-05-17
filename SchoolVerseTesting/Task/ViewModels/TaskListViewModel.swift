@@ -60,7 +60,13 @@ class TaskListViewModel: ObservableObject {
         api.ping()
     }
     
+    let debouncer = Debouncer(timeInterval: 10)
+    
+    // don't scrape too much (MONEY!!!!!)
     func scrape() {
-        api.scrape()
+        debouncer.renewInterval()
+        debouncer.handler = {
+            self.api.scrape()
+        }
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16075A4C2835DC3B00D56BFA /* PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16075A4B2835DC3B00D56BFA /* PeriodView.swift */; };
 		160A624528007763005AD088 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160A624428007763005AD088 /* RouterView.swift */; };
+		163496162834234C007F4FAD /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163496152834234C007F4FAD /* Debouncer.swift */; };
 		164264E92830550F00BF5369 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264E82830550F00BF5369 /* Schedule.swift */; };
 		164264EB2830A5CF00BF5369 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */; };
 		164264EF28315F2200BF5369 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EE28315F2200BF5369 /* Day.swift */; };
@@ -77,6 +78,7 @@
 /* Begin PBXFileReference section */
 		16075A4B2835DC3B00D56BFA /* PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodView.swift; sourceTree = "<group>"; };
 		160A624428007763005AD088 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		163496152834234C007F4FAD /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		164264E82830550F00BF5369 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		164264EE28315F2200BF5369 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 		16D7711F28020D07007E9424 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				163496152834234C007F4FAD /* Debouncer.swift */,
 				16D7712028020D14007E9424 /* Date.swift */,
 			);
 			path = Extensions;
@@ -544,6 +547,7 @@
 				16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */,
 				16D771182801F0F9007E9424 /* AddTaskViewModel.swift in Sources */,
 				167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */,
+				163496162834234C007F4FAD /* Debouncer.swift in Sources */,
 				168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */,
 				167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */,
 				16D7711E28020737007E9424 /* TaskDetailView.swift in Sources */,
