@@ -10,8 +10,9 @@ import Firebase
 import Combine
 import Alamofire
 
-// TODO: Check if server up
-// TODO: add debounce
+// TODO: Check if server up (done)
+// TODO: add debounce (done)
+// TODO: add front-facing alerts to user that request has been shown
 
 class APIService: ObservableObject {
     
@@ -42,9 +43,9 @@ class APIService: ObservableObject {
         ]
         
         AF.request(baseURL + "/scrape", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .cURLDescription { description in
-                print(description)
-            }
+//            .cURLDescription { description in
+//                print(description)
+//            }
 //            .response(completionHandler: { data in
 //                debugPrint(data)
 //            })
