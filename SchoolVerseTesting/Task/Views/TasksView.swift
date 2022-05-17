@@ -9,6 +9,7 @@ import SwiftUI
 
 // TODO: in the production app, add DI in tasklistvm, so you can add a dummy test data cell taskrepo
 // TODO: implement moving and deleting
+// TODO: ADD ALERT (LIKE NOTIFICATION RINGER) THAT AUTO DISMISSES BASED ON API SERVICE/SCRAPE SERVICE
 
 struct TasksView: View {
     // ensures screen doesn't blink
@@ -19,7 +20,13 @@ struct TasksView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("API status = \(taskListVM.apiStatus.description)")
+            Text("API status = \(taskListVM.apiStatus.description)") // ugly, fix later pls
+            
+            // change to error pop up stuff
+            if let scrapeStatus = taskListVM.scrapeStatus {
+                Text("scrape status = \(scrapeStatus.description)")
+                Text("scrape error = \(taskListVM.scrapeException ?? "no error")")
+            }
             List {
                 ForEach(taskListVM.taskCellViewModels) { taskCellVM in
                     TaskCellView(vm: taskCellVM)
@@ -36,17 +43,17 @@ struct TasksView: View {
         })
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
-                    Button {
-                        showAccountView.toggle()
-                    } label: {
-                        Label("Account", systemImage: "person.crop.circle")
-                    }
+                Button {
+                    showAccountView.toggle()
+                } label: {
+                    Label("Account", systemImage: "person.crop.circle")
+                }
                 
-                    Button {
-                        showAddTaskView.toggle()
-                    } label: {
-                        Label("New", systemImage: "plus")
-                    }
+                Button {
+                    showAddTaskView.toggle()
+                } label: {
+                    Label("New", systemImage: "plus")
+                }
             }
         }
         .navigationTitle("Tasks")

@@ -17,9 +17,8 @@ class TaskListViewModel: ObservableObject {
     
     private let api = APIService()
     @Published var apiStatus: Bool = false
-    @Published var scrapeStatus: ScrapeMessage = .error
-    
-    @Published var showPopup: Bool = false
+    @Published var scrapeStatus: ScrapeMessage?
+    @Published var scrapeException: String?
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -28,6 +27,8 @@ class TaskListViewModel: ObservableObject {
     }
     
     func addSubscribers() {
+        
+        // firebase vars
         
         // updates task cell view models
         repo.$tasks
@@ -48,11 +49,42 @@ class TaskListViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
+        // api vars
+        
         api.$status
             .sink { [weak self] (returnedStatus) in
                 self?.apiStatus = returnedStatus
             }
             .store(in: &cancellables)
+        
+        api.$scrapeStatus
+            .sink { [weak self] (returnedScrapeStatus) in
+                self?.scrapeStatus = returnedScrapeStatus
+            }
+            .store(in: &cancellables)
+        
+        // dismisses scrapeStatus after 5 seconds
+        $scrapeStatus
+            .debounce(for: .seconds(5), scheduler: RunLoop.main)
+            .sink { _ in
+                self.scrapeStatus = nil
+            }
+            .store(in: &cancellables)
+        
+        api.$scrapeException
+            .sink { [weak self] (returnedScrapeException) in
+                self?.scrapeException = returnedScrapeException
+            }
+            .store(in: &cancellables)
+        
+        // dismisses scrapeException after 5 seconds
+        $scrapeException
+            .debounce(for: .seconds(5), scheduler: RunLoop.main)
+            .sink { _ in
+                self.scrapeException = nil
+            }
+            .store(in: &cancellables)
+        
     }
     
     // checks if API is online
