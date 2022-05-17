@@ -20,7 +20,7 @@ class APIService: ObservableObject {
     @Published var status: Bool = false
     
     // scraping vars
-    @Published var scrapeStatus: ScrapeMessage = .error // default is error
+    @Published var scrapeStatus: ScrapeMessage?
     @Published var scrapeException: String?
     
     // linking vars
@@ -52,7 +52,7 @@ class APIService: ObservableObject {
             .responseDecodable(of: ScrapeResponse.self) { response in
                 debugPrint("scrape response: \(response.description)")
                 self.scrapeException = response.value?.exception
-                self.scrapeStatus = response.value?.message ?? .error
+                self.scrapeStatus = response.value?.message
             }
     }
     
