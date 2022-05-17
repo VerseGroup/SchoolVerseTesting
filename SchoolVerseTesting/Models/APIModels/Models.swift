@@ -13,7 +13,6 @@ enum ScrapeMessage: String, Codable {
     case error
     case firebaseNoUser
     case postgresNoUser
-    
 }
 
 // codable functionality
@@ -54,6 +53,6 @@ extension ScrapeMessage {
 }
 
 struct ScrapeResponse: Codable {
-    let message: String
+    let message: ScrapeMessage
     let exception: String? // only happens when ScrapeMessage.error
 }

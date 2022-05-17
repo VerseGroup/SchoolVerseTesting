@@ -15,6 +15,7 @@
 		164264F52831BE7D00BF5369 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */; };
 		164264F72831C15500BF5369 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F62831C15500BF5369 /* ScheduleView.swift */; };
 		165F7D602833D37B0075B1A4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 165F7D5F2833D37B0075B1A4 /* Alamofire */; };
+		165F7D622833D6BB0075B1A4 /* TestAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165F7D612833D6BB0075B1A4 /* TestAPIView.swift */; };
 		167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */; };
 		167C0C8E27FB531500C99B43 /* CredentialDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C8D27FB531500C99B43 /* CredentialDetails.swift */; };
 		167C0C9127FBEE8A00C99B43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */; };
@@ -40,7 +41,6 @@
 		168A5C2527FA543C00BA87FF /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 168A5C2427FA543C00BA87FF /* FirebaseFirestoreSwift-Beta */; };
 		16A6D8E12833341E00D4F380 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6D8E02833341E00D4F380 /* APIService.swift */; };
 		16A6D8E72833367000D4F380 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6D8E62833367000D4F380 /* Models.swift */; };
-		16A6D8E92833458F00D4F380 /* TestAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6D8E82833458F00D4F380 /* TestAPIView.swift */; };
 		16C5A7CD27FA577E004BD0D5 /* SchoolTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7CC27FA577E004BD0D5 /* SchoolTask.swift */; };
 		16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7CE27FA5CEE004BD0D5 /* TaskRepository.swift */; };
 		16C5A7D127FA6000004BD0D5 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C5A7D027FA6000004BD0D5 /* TaskListViewModel.swift */; };
@@ -82,6 +82,7 @@
 		164264EE28315F2200BF5369 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		164264F62831C15500BF5369 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		165F7D612833D6BB0075B1A4 /* TestAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIView.swift; sourceTree = "<group>"; };
 		167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		167C0C8D27FB531500C99B43 /* CredentialDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDetails.swift; sourceTree = "<group>"; };
 		167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		168A5C1727FA53ED00BA87FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16A6D8E02833341E00D4F380 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		16A6D8E62833367000D4F380 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		16A6D8E82833458F00D4F380 /* TestAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIView.swift; sourceTree = "<group>"; };
 		16C5A7CC27FA577E004BD0D5 /* SchoolTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTask.swift; sourceTree = "<group>"; };
 		16C5A7CE27FA5CEE004BD0D5 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		16C5A7D027FA6000004BD0D5 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
@@ -251,7 +251,6 @@
 				168A5BEC27FA51DF00BA87FF /* Assets.xcassets */,
 				168A5C1727FA53ED00BA87FF /* GoogleService-Info.plist */,
 				168A5BEE27FA51DF00BA87FF /* Preview Content */,
-				16A6D8E82833458F00D4F380 /* TestAPIView.swift */,
 			);
 			path = SchoolVerseTesting;
 			sourceTree = "<group>";
@@ -323,6 +322,7 @@
 				16D771192802044F007E9424 /* MenuRepository.swift */,
 				164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */,
 				16A6D8E02833341E00D4F380 /* APIService.swift */,
+				165F7D612833D6BB0075B1A4 /* TestAPIView.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 			files = (
 				16C5A7D327FA6021004BD0D5 /* TaskCellViewModel.swift in Sources */,
 				16A6D8E72833367000D4F380 /* Models.swift in Sources */,
-				16A6D8E92833458F00D4F380 /* TestAPIView.swift in Sources */,
+				165F7D622833D6BB0075B1A4 /* TestAPIView.swift in Sources */,
 				167C0C9127FBEE8A00C99B43 /* AuthenticationView.swift in Sources */,
 				16E05855280EF2AF0050A555 /* MenuListViewModel.swift in Sources */,
 				16D7711A2802044F007E9424 /* MenuRepository.swift in Sources */,
