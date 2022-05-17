@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct ScrapeResponse: Codable {
+    let message: ScrapeMessage
+    let exception: String? // only happens when ScrapeMessage.error
+}
+
 enum ScrapeMessage: String, Codable {
     case success
     case invalidPlatformCode
@@ -50,9 +55,15 @@ extension ScrapeMessage {
             return .error
         }
     }
-}
-
-struct ScrapeResponse: Codable {
-    let message: ScrapeMessage
-    let exception: String? // only happens when ScrapeMessage.error
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = ScrapeMessage.getMessage(message: rawValue)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(self.description)
+    }
 }
