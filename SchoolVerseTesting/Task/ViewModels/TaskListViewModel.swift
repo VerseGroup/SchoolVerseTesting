@@ -15,6 +15,12 @@ class TaskListViewModel: ObservableObject {
     @Published var taskCellViewModels = [TaskCellViewModel]()
     @Published var errorMessage: String?
     
+    private let api = APIService()
+    @Published var apiStatus: Bool = false
+    @Published var scrapeStatus: ScrapeMessage = .error
+    
+    @Published var showPopup: Bool = false
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -41,5 +47,20 @@ class TaskListViewModel: ObservableObject {
                 self?.errorMessage = returnedErrorMessage
             }
             .store(in: &cancellables)
+        
+        api.$status
+            .sink { [weak self] (returnedStatus) in
+                self?.apiStatus = returnedStatus
+            }
+            .store(in: &cancellables)
+    }
+    
+    // checks if API is online
+    func pingAPI() {
+        api.ping()
+    }
+    
+    func scrape() {
+        api.scrape()
     }
 }

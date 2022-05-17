@@ -11,6 +11,7 @@ import Combine
 import Alamofire
 
 // TODO: Check if server up
+// TODO: add debounce
 
 class APIService: ObservableObject {
     
@@ -44,8 +45,11 @@ class APIService: ObservableObject {
             .cURLDescription { description in
                 print(description)
             }
+//            .response(completionHandler: { data in
+//                debugPrint(data)
+//            })
             .responseDecodable(of: ScrapeResponse.self) { response in
-                debugPrint("scrape response: \(response.value)")
+                debugPrint("scrape response: \(response.description)")
                 self.scrapeException = response.value?.exception
                 self.scrapeStatus = response.value?.message ?? .error
             }

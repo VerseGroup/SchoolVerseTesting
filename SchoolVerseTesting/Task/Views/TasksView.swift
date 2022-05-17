@@ -9,6 +9,7 @@ import SwiftUI
 
 // TODO: in the production app, add DI in tasklistvm, so you can add a dummy test data cell taskrepo
 // TODO: implement moving and deleting
+
 struct TasksView: View {
     // ensures screen doesn't blink
     @StateObject var taskListVM = TaskListViewModel()
@@ -18,6 +19,7 @@ struct TasksView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            Text("API status = \(taskListVM.apiStatus.description)")
             List {
                 ForEach(taskListVM.taskCellViewModels) { taskCellVM in
                     TaskCellView(vm: taskCellVM)
@@ -25,7 +27,13 @@ struct TasksView: View {
                         .listRowSeparator(.hidden)
                 }
             }
+            .refreshable {
+                taskListVM.scrape()
+            }
         }
+        .onAppear(perform: {
+            taskListVM.pingAPI() // checks if API is online
+        })
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
                     Button {

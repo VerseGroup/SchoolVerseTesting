@@ -11,28 +11,30 @@ struct TestAPIView: View {
     @StateObject var vm: APIService = APIService()
     
     var body: some View {
-        VStack {
-            if vm.status {
-                Text("Server works!")
-                
-                switch vm.scrapeStatus {
-                case .success:
-                    Text("Success")
-                case .error:
-                    Text("Error: \(vm.scrapeException ?? "")")
-                case .postgresNoUser:
-                    Text("Postgres No User")
-                case .firebaseNoUser:
-                    Text("Firebase No User")
-                case .invalidPlatformCode:
-                    Text("Invalid platform code")
+        ScrollView {
+            VStack {
+                if vm.status {
+                    Text("Server works!")
+                    
+                    switch vm.scrapeStatus {
+                    case .success:
+                        Text("Success")
+                    case .error:
+                        Text("Error: \(vm.scrapeException ?? "")")
+                    case .postgresNoUser:
+                        Text("Postgres No User")
+                    case .firebaseNoUser:
+                        Text("Firebase No User")
+                    case .invalidPlatformCode:
+                        Text("Invalid platform code")
+                    }
+                    
+                } else {
+                    Text("Server no works")
                 }
-                
-            } else {
-                Text("Server no works")
             }
         }
-        .onAppear {
+        .refreshable {
             vm.scrape()
         }
     }
