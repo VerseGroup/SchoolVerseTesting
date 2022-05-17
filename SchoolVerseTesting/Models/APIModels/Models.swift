@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Networking
 
 enum ScrapeMessage: String, Codable {
     case success
@@ -58,5 +57,3 @@ struct ScrapeResponse: Codable {
     let message: String
     let exception: String? // only happens when ScrapeMessage.error
 }
-
-//extension ScrapeResponse: NetworkingJSONDecodable {}
