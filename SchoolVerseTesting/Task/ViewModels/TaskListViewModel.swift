@@ -92,6 +92,7 @@ class TaskListViewModel: ObservableObject {
         api.ping()
     }
     
+    // TODO: refactor later?
     let debouncer = Debouncer(timeInterval: 10)
     
     // don't scrape too much (MONEY!!!!!)

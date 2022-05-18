@@ -1,5 +1,5 @@
 //
-//  Models.swift
+//  ScrapeModels.swift
 //  SchoolVerseTesting
 //
 //  Created by Steven Yu on 5/16/22.
@@ -34,7 +34,7 @@ extension ScrapeMessage {
             case .firebaseNoUser:
                 return "user does not exist in firebase"
             case .postgresNoUser:
-                return "user does not exist postgres"
+                return "user does not exist in postgres"
             }
         }
     }
@@ -49,7 +49,7 @@ extension ScrapeMessage {
             return .error
         case "user does not exist in firebase":
             return .firebaseNoUser
-        case "user does not exist postgres":
+        case "user does not exist in postgres":
             return .postgresNoUser
         default:
             return .error
