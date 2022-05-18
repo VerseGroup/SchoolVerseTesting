@@ -16,11 +16,9 @@ class ScheduleRepository: ObservableObject {
     private let schedulePath: String = "SCHEDULES"
     private let db = Firestore.firestore()
     
-    @Published var days: [DayEvent] = []
-    @Published var schedule: Schedule?
+    @Published var dayEvents: [DayEvent] = [] // which days are day 1,2,3,4,5,6,7,...
+    @Published var schedule: Schedule? // user's schedule
     
-    @Published var currentDate: Date?
-    @Published var currentDay: Day?
     @Published var errorMessage: String?
     
     init() {
@@ -28,6 +26,7 @@ class ScheduleRepository: ObservableObject {
         loadSchedule()
     }
     
+    // loads the days
     func loadDays() {
         db.collection(dayPath)
             .addSnapshotListener { [weak self] (querySnapshot, error) in
@@ -35,7 +34,7 @@ class ScheduleRepository: ObservableObject {
                     self?.errorMessage = "No days found"
                     return
                 }
-                self?.days = documents.compactMap({ queryDocumentSnapshot in
+                self?.dayEvents = documents.compactMap({ queryDocumentSnapshot in
                     let result = Result { try queryDocumentSnapshot.data(as: DayEvent.self) }
                     
                     switch result {
@@ -61,11 +60,13 @@ class ScheduleRepository: ObservableObject {
             }
     }
     
+    // loads user's schedule
     func loadSchedule() {
         guard let userId = Auth.auth().currentUser?.uid else {
             return
         }
         
+        // change to userId later
         let docRef = db.collection(schedulePath).document("1")
         
         docRef.getDocument(as: Schedule.self) { result in

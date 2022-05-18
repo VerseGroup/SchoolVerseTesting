@@ -13,6 +13,8 @@
 		164264ED283158C300BF5369 /* DaysTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EC283158C300BF5369 /* DaysTestingView.swift */; };
 		164264EF28315F2200BF5369 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EE28315F2200BF5369 /* Day.swift */; };
 		164264F12831A4A500BF5369 /* ScheduleTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F02831A4A500BF5369 /* ScheduleTestingView.swift */; };
+		164264F52831BE7D00BF5369 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */; };
+		164264F72831C15500BF5369 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F62831C15500BF5369 /* ScheduleView.swift */; };
 		167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */; };
 		167C0C8E27FB531500C99B43 /* CredentialDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C8D27FB531500C99B43 /* CredentialDetails.swift */; };
 		167C0C9127FBEE8A00C99B43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */; };
@@ -76,6 +78,8 @@
 		164264EC283158C300BF5369 /* DaysTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTestingView.swift; sourceTree = "<group>"; };
 		164264EE28315F2200BF5369 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		164264F02831A4A500BF5369 /* ScheduleTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTestingView.swift; sourceTree = "<group>"; };
+		164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		164264F62831C15500BF5369 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		167C0C8D27FB531500C99B43 /* CredentialDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDetails.swift; sourceTree = "<group>"; };
 		167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -146,10 +150,28 @@
 		164264E72830539100BF5369 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				164264F22831BE6800BF5369 /* ViewModels */,
+				164264F32831BE6C00BF5369 /* Views */,
 				164264EC283158C300BF5369 /* DaysTestingView.swift */,
 				164264F02831A4A500BF5369 /* ScheduleTestingView.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		164264F22831BE6800BF5369 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		164264F32831BE6C00BF5369 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				164264F62831C15500BF5369 /* ScheduleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		16555B682803C0220020F5C9 /* Frameworks */ = {
@@ -486,6 +508,7 @@
 				164264EF28315F2200BF5369 /* Day.swift in Sources */,
 				16D7711C2802046D007E9424 /* Menu.swift in Sources */,
 				16C5A7CD27FA577E004BD0D5 /* SchoolTask.swift in Sources */,
+				164264F52831BE7D00BF5369 /* ScheduleViewModel.swift in Sources */,
 				16C5A7D727FA6156004BD0D5 /* TaskCellView.swift in Sources */,
 				16C5A7D527FA60BA004BD0D5 /* TasksView.swift in Sources */,
 				164264EB2830A5CF00BF5369 /* ScheduleRepository.swift in Sources */,
@@ -494,6 +517,7 @@
 				16C5A7D127FA6000004BD0D5 /* TaskListViewModel.swift in Sources */,
 				16D7712128020D14007E9424 /* Date.swift in Sources */,
 				1687BB9B2810F11700B512B8 /* HomeView.swift in Sources */,
+				164264F72831C15500BF5369 /* ScheduleView.swift in Sources */,
 				1687BB932810DA8300B512B8 /* MenusView.swift in Sources */,
 				164264F12831A4A500BF5369 /* ScheduleTestingView.swift in Sources */,
 				16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */,

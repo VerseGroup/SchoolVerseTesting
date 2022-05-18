@@ -12,7 +12,7 @@ struct DaysTestingView: View {
     
     var body: some View {
         VStack {
-            Text(vm.days.first?.day.description ?? "Error")
+            Text(vm.dayEvents.first?.day.description ?? "Error")
             
             Spacer()
             

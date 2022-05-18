@@ -37,6 +37,16 @@ struct HomeView: View {
                             .background(Color.purple)
                             .cornerRadius(5)
                     }
+                    
+                    NavigationLink {
+                        ScheduleView()
+                    } label: {
+                        Text("Schedule")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color.purple)
+                            .cornerRadius(5)
+                    }
                 }
             }
             .navigationBarHidden(true)
