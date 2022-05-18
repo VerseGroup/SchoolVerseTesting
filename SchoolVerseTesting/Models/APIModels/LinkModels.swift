@@ -9,6 +9,12 @@ import Foundation
 
 // TODO: add veracross invalid creds
 
+// platform codes for SchoolVerse
+enum Platform: String {
+    case schoology = "sc"
+    case veracross = "vc"
+}
+
 struct LinkResponse: Codable {
     let message: LinkMessage
     let exception: String?
