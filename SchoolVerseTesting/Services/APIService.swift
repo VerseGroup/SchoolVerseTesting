@@ -24,6 +24,8 @@ class APIService: ObservableObject {
     @Published var scrapeException: String?
     
     // linking vars
+    @Published var linkStatus: LinkMessage?
+    @Published var linkException: String?
     
     init() {
         ping()
@@ -63,6 +65,35 @@ class APIService: ObservableObject {
             .response { response in
                 self.status = true
                 debugPrint(response)
+            }
+    }
+    
+    // links user's credentials (schoology or veracross) to a SchoolVerse account
+    func link(platform: Platform,  username: String, password: String) {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("user not initialized")
+            return
+        }
+        
+        let parameters: [String: String] = [
+            "user_id": userId,
+            "auth_token": "",
+            "platform_code": platform.rawValue,
+            "username": username,
+            "password": password
+        ]
+        
+        AF.request(baseURL + "/link", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        //            .cURLDescription { description in
+        //                print(description)
+        //            }
+        //            .response(completionHandler: { data in
+        //                debugPrint(data)
+        //            })
+            .responseDecodable(of: LinkResponse.self) { response in
+                debugPrint("link response: \(response.description)")
+                self.linkStatus = response.value?.message
+                self.scrapeException = response.value?.exception
             }
     }
 }
