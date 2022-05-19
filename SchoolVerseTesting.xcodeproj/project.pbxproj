@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16075A4C2835DC3B00D56BFA /* PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16075A4B2835DC3B00D56BFA /* PeriodView.swift */; };
 		160A624528007763005AD088 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160A624428007763005AD088 /* RouterView.swift */; };
 		164264E92830550F00BF5369 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264E82830550F00BF5369 /* Schedule.swift */; };
 		164264EB2830A5CF00BF5369 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */; };
-		164264ED283158C300BF5369 /* DaysTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EC283158C300BF5369 /* DaysTestingView.swift */; };
 		164264EF28315F2200BF5369 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EE28315F2200BF5369 /* Day.swift */; };
-		164264F12831A4A500BF5369 /* ScheduleTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F02831A4A500BF5369 /* ScheduleTestingView.swift */; };
 		164264F52831BE7D00BF5369 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */; };
 		164264F72831C15500BF5369 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F62831C15500BF5369 /* ScheduleView.swift */; };
 		167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */; };
@@ -72,12 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16075A4B2835DC3B00D56BFA /* PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodView.swift; sourceTree = "<group>"; };
 		160A624428007763005AD088 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		164264E82830550F00BF5369 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
-		164264EC283158C300BF5369 /* DaysTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTestingView.swift; sourceTree = "<group>"; };
 		164264EE28315F2200BF5369 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		164264F02831A4A500BF5369 /* ScheduleTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTestingView.swift; sourceTree = "<group>"; };
 		164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		164264F62831C15500BF5369 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
@@ -152,8 +150,6 @@
 			children = (
 				164264F22831BE6800BF5369 /* ViewModels */,
 				164264F32831BE6C00BF5369 /* Views */,
-				164264EC283158C300BF5369 /* DaysTestingView.swift */,
-				164264F02831A4A500BF5369 /* ScheduleTestingView.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -170,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				164264F62831C15500BF5369 /* ScheduleView.swift */,
+				16075A4B2835DC3B00D56BFA /* PeriodView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -506,6 +503,7 @@
 				1687BB992810E2D300B512B8 /* FoodView.swift in Sources */,
 				167C0C8E27FB531500C99B43 /* CredentialDetails.swift in Sources */,
 				164264EF28315F2200BF5369 /* Day.swift in Sources */,
+				16075A4C2835DC3B00D56BFA /* PeriodView.swift in Sources */,
 				16D7711C2802046D007E9424 /* Menu.swift in Sources */,
 				16C5A7CD27FA577E004BD0D5 /* SchoolTask.swift in Sources */,
 				164264F52831BE7D00BF5369 /* ScheduleViewModel.swift in Sources */,
@@ -519,12 +517,10 @@
 				1687BB9B2810F11700B512B8 /* HomeView.swift in Sources */,
 				164264F72831C15500BF5369 /* ScheduleView.swift in Sources */,
 				1687BB932810DA8300B512B8 /* MenusView.swift in Sources */,
-				164264F12831A4A500BF5369 /* ScheduleTestingView.swift in Sources */,
 				16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */,
 				16D771182801F0F9007E9424 /* AddTaskViewModel.swift in Sources */,
 				167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */,
 				168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */,
-				164264ED283158C300BF5369 /* DaysTestingView.swift in Sources */,
 				167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */,
 				16D7711E28020737007E9424 /* TaskDetailView.swift in Sources */,
 				1687BB952810DB2100B512B8 /* MenuCellView.swift in Sources */,

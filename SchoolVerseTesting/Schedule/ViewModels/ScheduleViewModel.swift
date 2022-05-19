@@ -16,13 +16,13 @@ class ScheduleViewModel: ObservableObject {
     @Published var schedule: Schedule?
     
     @Published var selectedDayEvent: DayEvent?
+    @Published var selectedDate: Date
     
     private var cancellables = Set<AnyCancellable>()
     
     init() {
+        selectedDate = Date()
         addSubscribers()
-        print(selectedDayEvent?.id ?? "no id")
-         // automatically set selectedDayEvent to today
     }
     
     func addSubscribers() {
@@ -39,16 +39,26 @@ class ScheduleViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
-        // sets selectedDayEvent to the current day
+        // sets selectedDayEvent to the current day ***on init***
         $dayEvents
             .sink { (dayEvents) in
                 self.selectedDayEvent = dayEvents.first(where: { dayEvent in
                     Calendar.current.isDateInToday(dayEvent.date)
                 }) ?? nil
-                print(self.selectedDayEvent?.id ?? "no id2")
+            }
+            .store(in: &cancellables)
+        
+        // sets selectedDayEvent to the selectedDate
+        $selectedDate
+            .sink{ (date) in
+                self.selectedDayEvent = self.dayEvents.first(where: { dayEvent in
+                    Calendar.current.isDate(dayEvent.date, equalTo: date, toGranularity: .day)
+                }) ?? nil
             }
             .store(in: &cancellables)
     }
     
-    //source: https://www.hackingwithswift.com/example-code/system/how-to-check-whether-one-date-is-similar-to-another
+    func updateSelectedDayEvent(date: Date) {
+        selectedDate = date
+    }
 }
