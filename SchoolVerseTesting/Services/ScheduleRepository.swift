@@ -67,7 +67,7 @@ class ScheduleRepository: ObservableObject {
         }
         
         // change to userId later
-        let docRef = db.collection(schedulePath).document("1")
+        let docRef = db.collection(schedulePath).document(userId)
         
         docRef.getDocument(as: Schedule.self) { result in
             switch result {
