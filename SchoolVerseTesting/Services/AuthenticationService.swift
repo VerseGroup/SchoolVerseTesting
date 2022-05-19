@@ -11,10 +11,13 @@ import Firebase
 import FirebaseAuth
 import FirebaseAuthCombineSwift
 
+// TODO: Add api /adduser for postgres heroku
 class AuthenticationService: ObservableObject {
     @Published var user: User?
     @Published var isAuthenticated: Bool = false
     @Published var errorMessage: String?
+    
+    private var api: APIService = APIService()
     
     private var handle: AuthStateDidChangeListenerHandle?
     
@@ -96,6 +99,7 @@ class AuthenticationService: ObservableObject {
     func signUp(creds: CredentialDetails) async {
         do {
             try await Auth.auth().createUser(withEmail: creds.email, password: creds.password)
+            api.addUser()
         } catch {
             print("There was an issue when trying to sign in: \(error)")
             DispatchQueue.main.async {
@@ -104,4 +108,13 @@ class AuthenticationService: ObservableObject {
         }
     }
     
+//    func addUserDocument() {
+//        let collectionRef = db.collection("USERS")
+//        do {
+//            let newDocReference = try collectionRef.addDocument(from: _______)
+//            print("User stored with new document reference: \(newDocReference)")
+//        } catch {
+//            errorMessage = error.localizedDescription
+//        }
+//    }
 }

@@ -27,6 +27,10 @@ class APIService: ObservableObject {
     @Published var linkStatus: LinkMessage?
     @Published var linkException: String?
     
+    // add user vars
+    @Published var addUserStatus: AddUserMessage?
+    @Published var addUserException: String?
+    
     init() {
         ping()
     }
@@ -45,12 +49,12 @@ class APIService: ObservableObject {
         ]
         
         AF.request(baseURL + "/scrape", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-//            .cURLDescription { description in
-//                print(description)
-//            }
-//            .response(completionHandler: { data in
-//                debugPrint(data)
-//            })
+        //            .cURLDescription { description in
+        //                print(description)
+        //            }
+        //            .response(completionHandler: { data in
+        //                debugPrint(data)
+        //            })
             .responseDecodable(of: ScrapeResponse.self) { response in
                 debugPrint("scrape response: \(response.description)")
                 self.scrapeException = response.value?.exception
@@ -84,16 +88,42 @@ class APIService: ObservableObject {
         ]
         
         AF.request(baseURL + "/link", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        //            .cURLDescription { description in
-        //                print(description)
-        //            }
-        //            .response(completionHandler: { data in
-        //                debugPrint(data)
-        //            })
+//                    .cURLDescription { description in
+//                        print(description)
+//                    }
+//                    .response(completionHandler: { data in
+//                        debugPrint(data)
+//                    })
             .responseDecodable(of: LinkResponse.self) { response in
                 debugPrint("link response: \(response.description)")
                 self.linkStatus = response.value?.message
                 self.scrapeException = response.value?.exception
+            }
+    }
+    
+    // add user functionality (called on sign up)
+    func addUser() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("user not initialized")
+            return
+        }
+        
+        let parameters: [String: String] = [
+            "user_id": userId,
+            "auth_token": ""
+        ]
+        
+        AF.request(baseURL + "/adduser", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+//            .cURLDescription { description in
+//                print(description)
+//            }
+//            .response(completionHandler: { data in
+//                debugPrint(data)
+//            })
+            .responseDecodable(of: AddUserResponse.self) { response in
+                debugPrint("add user response: \(response.description)")
+                self.addUserStatus = response.value?.message
+                self.addUserException = response.value?.exception
             }
     }
 }
