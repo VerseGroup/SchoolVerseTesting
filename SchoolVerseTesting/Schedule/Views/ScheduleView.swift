@@ -41,11 +41,16 @@ struct ScheduleView: View {
                 
                 // main view
                 ScrollView {
-                    VStack(alignment: .leading) {
-                        if let day = vm.selectedDayEvent?.day.description {
-                            Text(day)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            if let day = vm.selectedDayEvent?.day.description {
+                                Text(day)
+                                    .font(.title2)
+                                    .bold()
+                            }
+                            Text("\(vm.selectedDate.weekDateString())")
                         }
-                        Text("\(Date.weekDateString(vm.selectedDate)())")
+                        Spacer()
                     }
                     .padding()
                     .foregroundColor(Color.white)
