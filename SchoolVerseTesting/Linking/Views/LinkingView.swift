@@ -16,25 +16,27 @@ struct LinkingView: View {
     
     var body: some View {
         VStack {
-            Picker("Platform", selection: $platform) {
-                ForEach(Platform.allCases, id:\.self) { platform in
-                    Text(platform.rawValue)
+            Form {
+                Picker("Platform", selection: $platform) {
+                    ForEach(Platform.allCases, id:\.self) { platform in
+                        Text(platform.rawValue)
+                    }
                 }
+                .pickerStyle(SegmentedPickerStyle())
+                
+                TextField("Username", text: $username)
+                    .textInputAutocapitalization(.never)
+                SecureField("Password", text: $password)
+                
+                Button {
+                    vm.link(platform: platform, username: username, password: password)
+                } label: {
+                    Text("Link")
+                }
+                .tint(.purple) // change to custom color scheme later
+                .controlSize(.large)
+                .buttonStyle(.borderedProminent)
             }
-            .pickerStyle(SegmentedPickerStyle())
-            
-            TextField("Username", text: $username)
-                .textInputAutocapitalization(.never)
-            SecureField("Password", text: $password)
-            
-            Button {
-                vm.link(platform: platform, username: username, password: password)
-            } label: {
-                Text("Link")
-            }
-            .tint(.purple) // change to custom color scheme later
-            .controlSize(.large)
-            .buttonStyle(.borderedProminent)
         }
         .navigationTitle("Link")
         .banner(title: vm.bannerTitle, detail: vm.bannerDetail, show: $vm.showBanner)
