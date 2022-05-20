@@ -24,6 +24,7 @@
 		161AF7B72837C84000322114 /* SportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7B62837C84000322114 /* SportsView.swift */; };
 		161AF7B92837C88500322114 /* SportsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7B82837C88500322114 /* SportsCellView.swift */; };
 		161AF7BB2837C89400322114 /* SportsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7BA2837C89400322114 /* SportsDetailView.swift */; };
+		161AF7BF2837D19400322114 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7BE2837D19400322114 /* HomeViewModel.swift */; };
 		163496162834234C007F4FAD /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163496152834234C007F4FAD /* Debouncer.swift */; };
 		164264E92830550F00BF5369 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264E82830550F00BF5369 /* Schedule.swift */; };
 		164264EB2830A5CF00BF5369 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */; };
@@ -31,7 +32,6 @@
 		164264F52831BE7D00BF5369 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */; };
 		164264F72831C15500BF5369 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264F62831C15500BF5369 /* ScheduleView.swift */; };
 		164795E128352CC100C95BC3 /* LinkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164795E028352CC100C95BC3 /* LinkModels.swift */; };
-		164795E32835332400C95BC3 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164795E22835332400C95BC3 /* LinkView.swift */; };
 		164795E72835DD9F00C95BC3 /* AddUserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164795E62835DD9F00C95BC3 /* AddUserModels.swift */; };
 		165F7D602833D37B0075B1A4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 165F7D5F2833D37B0075B1A4 /* Alamofire */; };
 		167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */; };
@@ -116,6 +116,7 @@
 		161AF7B62837C84000322114 /* SportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsView.swift; sourceTree = "<group>"; };
 		161AF7B82837C88500322114 /* SportsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCellView.swift; sourceTree = "<group>"; };
 		161AF7BA2837C89400322114 /* SportsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsDetailView.swift; sourceTree = "<group>"; };
+		161AF7BE2837D19400322114 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		163496152834234C007F4FAD /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		164264E82830550F00BF5369 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		164264F42831BE7D00BF5369 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		164264F62831C15500BF5369 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		164795E028352CC100C95BC3 /* LinkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkModels.swift; sourceTree = "<group>"; };
-		164795E22835332400C95BC3 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		164795E62835DD9F00C95BC3 /* AddUserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserModels.swift; sourceTree = "<group>"; };
 		167C0C8927FB3B9A00C99B43 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		167C0C8D27FB531500C99B43 /* CredentialDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDetails.swift; sourceTree = "<group>"; };
@@ -272,6 +272,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		161AF7BC2837D17A00322114 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				161AF7BE2837D19400322114 /* HomeViewModel.swift */,
+				1687BB9A2810F11700B512B8 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		164264E72830539100BF5369 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,14 +373,13 @@
 				168A5C1627FA532300BA87FF /* Services */,
 				161AF78C283732CE00322114 /* TabBar */,
 				161AF79728373E4200322114 /* Banner */,
-				1687BB9A2810F11700B512B8 /* HomeView.swift */,
-				164795E22835332400C95BC3 /* LinkView.swift */,
 				161AF7A128374C9D00322114 /* MoreView.swift */,
 				168A5C1227FA52F500BA87FF /* Models */,
 				167C0C8B27FB4F7F00C99B43 /* Task */,
 				16E05851280EF2700050A555 /* Menu */,
 				167C0C8C27FB4FAF00C99B43 /* Authentication */,
 				164264E72830539100BF5369 /* Schedule */,
+				161AF7BC2837D17A00322114 /* Home */,
 				169BBAA32836962800BF975B /* Event */,
 				161AF7A5283751EE00322114 /* Linking */,
 				161AF7AE2837C59B00322114 /* Sports */,
@@ -715,9 +723,9 @@
 				164264F72831C15500BF5369 /* ScheduleView.swift in Sources */,
 				1687BB932810DA8300B512B8 /* MenusView.swift in Sources */,
 				161AF78E2837331500322114 /* TabBarView.swift in Sources */,
-				164795E32835332400C95BC3 /* LinkView.swift in Sources */,
 				16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */,
 				169BBAA9283697FA00BF975B /* EventsView.swift in Sources */,
+				161AF7BF2837D19400322114 /* HomeViewModel.swift in Sources */,
 				16D771182801F0F9007E9424 /* AddTaskViewModel.swift in Sources */,
 				169BBAA72836965C00BF975B /* EventListViewModel.swift in Sources */,
 				167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */,

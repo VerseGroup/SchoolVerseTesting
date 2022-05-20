@@ -9,16 +9,16 @@ import SwiftUI
 
 struct AppView: View {
     
-    @State private var selection: String = "home"
-    @State private var tabSelection: TabBarItem = .home
+    @State private var selection: String = "tasks"
+    @State private var tabSelection: TabBarItem = .tasks
     
     var body: some View {
         TabBarContainerView(selection: $tabSelection) {
-            // home
-            NavigationView {
-                HomeView()
-            }
-            .tabBarItem(tab: .home, selection: $tabSelection)
+            // home add later
+//            NavigationView {
+//                HomeView()
+//            }
+//            .tabBarItem(tab: .home, selection: $tabSelection)
             
             // tasks
             NavigationView {

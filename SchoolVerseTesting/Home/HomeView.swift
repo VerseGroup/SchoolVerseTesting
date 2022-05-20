@@ -7,12 +7,18 @@
 
 import SwiftUI
 
+// TODO: Change HomeView 
 struct HomeView: View {
-    @State var show: Bool = false
+    
     var body: some View {
-        VStack {
-            Text("Home")
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text("Hello")
+                    .font(.largeTitle)
+                    .bold()
+            }
         }
+        .navigationTitle("Home")
     }
     
     struct HomeView_Previews: PreviewProvider {
