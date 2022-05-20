@@ -25,7 +25,8 @@ struct EventCellView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color.accentColor)
+        .foregroundColor(Color.white)
+        .background(Color.purple)
         .cornerRadius(10)
         .sheet(isPresented: $showEventDetailView) {
             EventDetailView()

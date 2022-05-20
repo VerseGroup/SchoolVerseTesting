@@ -52,11 +52,12 @@ struct FoodView: View {
                         .font(.headline)
                 }
             )
-            .accentColor(Color.black)
+            .accentColor(Color.white)
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color.accentColor)
+        .foregroundColor(Color.white)
+        .background(Color.purple)
         .cornerRadius(10)
     }
 }

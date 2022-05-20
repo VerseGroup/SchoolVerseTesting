@@ -33,7 +33,10 @@ struct AppView: View {
             .tabBarItem(tab: .schedule, selection: $tabSelection)
             
             // More View
-            
+            NavigationView {
+                MoreView()
+            }
+            .tabBarItem(tab: .more, selection: $tabSelection)
         }
     }
 }

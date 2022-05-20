@@ -19,7 +19,8 @@ struct MenuCellView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color.accentColor)
+        .foregroundColor(Color.white)
+        .background(Color.purple)
         .cornerRadius(10)
         .sheet(isPresented: $showMenuDetailView) {
             MenuDetailView(menu: menu)

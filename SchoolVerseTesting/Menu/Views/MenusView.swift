@@ -22,7 +22,7 @@ struct MenusView: View {
                 }
             }
         }
-        .navigationTitle("Menus 🍽")
+        .navigationTitle("Menus")
     }
 }
 
