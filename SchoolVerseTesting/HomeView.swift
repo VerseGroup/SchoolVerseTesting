@@ -47,6 +47,16 @@ struct HomeView: View {
                             .background(Color.purple)
                             .cornerRadius(5)
                     }
+                    
+                    NavigationLink {
+                        EventsView()
+                    } label: {
+                        Text("Events")
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .background(Color.purple)
+                            .cornerRadius(5)
+                    }
                 }
             }
             .navigationBarHidden(true)
