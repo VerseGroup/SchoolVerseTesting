@@ -13,18 +13,21 @@ struct AccountView: View {
     var body: some View {
         VStack {
             Form {
-                Text(authenticationService.user?.email ?? "nil")
-                
-                Button {
-                    authenticationService.signOut()
-                } label: {
-                    Text("Sign out")
-                        .bold()
-                        .frame(maxWidth: .infinity)
+                Section("Email") {
+                    Text(authenticationService.user?.email ?? "nil")
                 }
-                .tint(.purple) // change to custom color scheme later
-                .controlSize(.large)
-                .buttonStyle(.borderedProminent)
+                Section("Sign out") {
+                    Button {
+                        authenticationService.signOut()
+                    } label: {
+                        Text("Sign out")
+                            .bold()
+                            .frame(maxWidth: .infinity)
+                    }
+                    .tint(.purple) // change to custom color scheme later
+                    .controlSize(.large)
+                    .buttonStyle(.borderedProminent)
+                }
             }
             
         }

@@ -28,6 +28,7 @@ class LinkingViewModel: ObservableObject {
     
     private func addSubscribers() {
         api.$linkStatus
+            .dropFirst()
             .sink { [weak self] (linkStatus) in
                 self?.linkStatus = linkStatus
                 
