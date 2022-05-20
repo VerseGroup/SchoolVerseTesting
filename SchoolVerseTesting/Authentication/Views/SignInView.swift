@@ -7,35 +7,40 @@
 
 import SwiftUI
 
+// TODO: Fix authentication error
 struct SignInView: View {
     @EnvironmentObject var authenticationService: AuthenticationService
     @State var creds: CredentialDetails = CredentialDetails(email: "", password: "")
-
+    
     
     var body: some View {
-        VStack(alignment: .leading) {
-            TextField("Enter email", text: $creds.email)
-                .textInputAutocapitalization(.never)
-                .keyboardType(.emailAddress)
-                .textContentType(.emailAddress)
-            SecureField("Enter password", text: $creds.password)
-            
-            Button {
-                Task {
-                    await authenticationService.signIn(creds: creds)
+        NavigationView {
+            Form {
+                TextField("Enter email", text: $creds.email)
+                    .textInputAutocapitalization(.never)
+                    .keyboardType(.emailAddress)
+                    .textContentType(.emailAddress)
+                SecureField("Enter password", text: $creds.password)
+                
+                Button {
+                    Task {
+                        await authenticationService.signIn(creds: creds)
+                    }
+                } label: {
+                    Text("Sign in")
+                        .bold()
+                        .frame(maxWidth: .infinity)
                 }
-            } label: {
-                Text("Sign in")
-                    .bold()
-                    .frame(maxWidth: .infinity)
+                .tint(.purple) // change to custom color scheme later
+                .controlSize(.large)
+                .buttonStyle(.borderedProminent)
             }
-            .tint(.purple) // change to custom color scheme later
-            .controlSize(.large)
-            .buttonStyle(.borderedProminent)
-
-            if let error = authenticationService.errorMessage {
-                Text(error)
-            }
+            .navigationTitle("Sign In")
+            
+            // FIX
+//            if let error = authenticationService.errorMessage {
+//                Text(error)
+//            }
         }
     }
 }

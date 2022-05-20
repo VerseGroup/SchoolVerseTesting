@@ -12,16 +12,23 @@ struct AccountView: View {
     
     var body: some View {
         VStack {
-            Button {
-                authenticationService.signOut()
-            } label: {
-                Text("Sign out")
+            Form {
+                Text(authenticationService.user?.email ?? "nil")
+                
+                Button {
+                    authenticationService.signOut()
+                } label: {
+                    Text("Sign out")
+                        .bold()
+                        .frame(maxWidth: .infinity)
+                }
+                .tint(.purple) // change to custom color scheme later
+                .controlSize(.large)
+                .buttonStyle(.borderedProminent)
             }
-            .tint(.purple) // change to custom color scheme later
-            .controlSize(.large)
-            .buttonStyle(.borderedProminent)
-
+            
         }
+        .navigationTitle("Account")
     }
 }
 

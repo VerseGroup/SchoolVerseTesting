@@ -50,6 +50,22 @@ struct MoreView: View {
                 }
                 
                 NavigationLink {
+                    SportsView()
+                } label: {
+                    VStack {
+                        Image(systemName: "sportscourt")
+                            .font(.largeTitle)
+                        Text("Sports")
+                            .font(.title2)
+                    }
+                    .foregroundColor(Color.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.purple)
+                    .cornerRadius(10)
+                }
+                
+                NavigationLink {
                     AccountView()
                 } label: {
                     VStack {

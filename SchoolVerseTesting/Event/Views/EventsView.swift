@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct EventsView: View {
-    @StateObject var eventListVM: EventListViewModel = EventListViewModel()
+    @StateObject var vm: EventListViewModel = EventListViewModel()
     
     var body: some View {
         VStack {
             List {
-                ForEach(eventListVM.events) { event in
+                ForEach(vm.events) { event in
                     EventCellView(event: event)
                         .listRowBackground(EmptyView())
                         .listRowSeparator(.hidden)
                 }
             }
         }
-        .navigationTitle("Events 🗓️")
+        .navigationTitle("Events")
     }
 }
 

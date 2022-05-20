@@ -12,7 +12,14 @@ struct AuthenticationView: View {
     @State var showSignUpView: Bool = false
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text("Welcome to SchoolVerse!")
+                .font(.title)
+                .bold()
+            
+            Spacer()
+            Spacer()
+            
             Button {
                 showSignInView.toggle()
             } label: {
@@ -35,7 +42,9 @@ struct AuthenticationView: View {
             .controlSize(.large)
             .buttonStyle(.borderedProminent)
 
+            Spacer()
         }
+        .padding()
         .sheet(isPresented: $showSignInView) {
             SignInView()
         }
