@@ -40,7 +40,9 @@ struct TaskCellView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color.accentColor)
+        .background(
+            Color.purple
+        )
         .cornerRadius(10)
         .sheet(isPresented: $showTaskDetailView) {
             NavigationView {

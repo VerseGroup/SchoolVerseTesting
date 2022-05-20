@@ -12,11 +12,11 @@ import Firebase
 // hooks into application lifecycle
 // source: https://peterfriese.dev/posts/swiftui-new-app-lifecycle-firebase/
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
 }
 
 // TODO: IMPLEMENT CLASS FUNCTION AND SELECTION
@@ -25,13 +25,11 @@ struct SchoolVerseTestingApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     // single source of truth, singleton
     @StateObject var authenticationService: AuthenticationService = AuthenticationService.instance
-
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                RouterView()
-            }
-            .environmentObject(authenticationService)
+            RouterView()
+                .environmentObject(authenticationService)
         }
     }
 }

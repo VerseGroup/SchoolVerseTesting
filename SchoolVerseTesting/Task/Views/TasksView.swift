@@ -16,17 +16,17 @@ struct TasksView: View {
     @StateObject var taskListVM = TaskListViewModel()
     
     @State private var showAddTaskView: Bool = false
-    @State private var showAccountView: Bool = false
+    
+    //        Text("API status = \(taskListVM.apiStatus.description)") // ugly, fix later pls
+    //
+    //        // change to error pop up stuff
+    //        if let scrapeStatus = taskListVM.scrapeStatus {
+    //            Text("scrape status = \(scrapeStatus.description)")
+    //            Text("scrape error = \(taskListVM.scrapeException ?? "no error")")
+    //        }
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("API status = \(taskListVM.apiStatus.description)") // ugly, fix later pls
-            
-            // change to error pop up stuff
-            if let scrapeStatus = taskListVM.scrapeStatus {
-                Text("scrape status = \(scrapeStatus.description)")
-                Text("scrape error = \(taskListVM.scrapeException ?? "no error")")
-            }
             List {
                 ForEach(taskListVM.taskCellViewModels) { taskCellVM in
                     TaskCellView(vm: taskCellVM)
@@ -41,21 +41,6 @@ struct TasksView: View {
         .onAppear(perform: {
             taskListVM.pingAPI() // checks if API is online
         })
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomBar) {
-                Button {
-                    showAccountView.toggle()
-                } label: {
-                    Label("Account", systemImage: "person.crop.circle")
-                }
-                
-                Button {
-                    showAddTaskView.toggle()
-                } label: {
-                    Label("New", systemImage: "plus")
-                }
-            }
-        }
         .navigationTitle("Tasks")
         .listStyle(.sidebar)
         .sheet(isPresented: $showAddTaskView, content: {
@@ -63,11 +48,17 @@ struct TasksView: View {
                 AddTaskView()
             }
         })
-        .sheet(isPresented: $showAccountView) {
-            NavigationView {
-                AccountView()
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button {
+                    showAddTaskView.toggle()
+                } label: {
+                    Image(systemName: "plus")
+                }
+
             }
         }
+        .banner(title: taskListVM.bannerTitle, detail: taskListVM.bannerDetail, show: $taskListVM.showBanner)
     }
 }
 

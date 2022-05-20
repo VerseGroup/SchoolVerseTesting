@@ -20,6 +20,10 @@ class TaskListViewModel: ObservableObject {
     @Published var scrapeStatus: ScrapeMessage?
     @Published var scrapeException: String?
     
+    @Published var showBanner: Bool = false
+    @Published var bannerTitle: String = ""
+    @Published var bannerDetail: String? = nil
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -54,12 +58,18 @@ class TaskListViewModel: ObservableObject {
         api.$status
             .sink { [weak self] (returnedStatus) in
                 self?.apiStatus = returnedStatus
+                
+                self?.bannerTitle = "API is \(returnedStatus ? "online" : "offline")!"
+                self?.showBanner = true
             }
             .store(in: &cancellables)
         
         api.$scrapeStatus
             .sink { [weak self] (returnedScrapeStatus) in
                 self?.scrapeStatus = returnedScrapeStatus
+                
+                self?.bannerTitle = returnedScrapeStatus?.description ?? "No status"
+                self?.showBanner = true
             }
             .store(in: &cancellables)
         
@@ -74,6 +84,8 @@ class TaskListViewModel: ObservableObject {
         api.$scrapeException
             .sink { [weak self] (returnedScrapeException) in
                 self?.scrapeException = returnedScrapeException
+                
+                self?.bannerDetail = returnedScrapeException
             }
             .store(in: &cancellables)
         
