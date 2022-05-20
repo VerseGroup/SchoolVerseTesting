@@ -10,7 +10,7 @@ import Foundation
 // TODO: add veracross invalid creds
 
 // platform codes for SchoolVerse
-enum Platform: String {
+enum Platform: String, CaseIterable {
     case schoology = "sc"
     case veracross = "vc"
 }

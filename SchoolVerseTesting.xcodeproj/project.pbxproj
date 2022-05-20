@@ -16,6 +16,9 @@
 		161AF7962837350A00322114 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7952837350A00322114 /* AppView.swift */; };
 		161AF7A02837415400322114 /* BannerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF79F2837415400322114 /* BannerModifier.swift */; };
 		161AF7A228374C9D00322114 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7A128374C9D00322114 /* MoreView.swift */; };
+		161AF7A42837508800322114 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7A32837508800322114 /* UserRepository.swift */; };
+		161AF7A92837522100322114 /* LinkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7A82837522100322114 /* LinkingView.swift */; };
+		161AF7AD2837523F00322114 /* LinkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7AC2837523F00322114 /* LinkingViewModel.swift */; };
 		163496162834234C007F4FAD /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163496152834234C007F4FAD /* Debouncer.swift */; };
 		164264E92830550F00BF5369 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264E82830550F00BF5369 /* Schedule.swift */; };
 		164264EB2830A5CF00BF5369 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */; };
@@ -100,6 +103,9 @@
 		161AF7952837350A00322114 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		161AF79F2837415400322114 /* BannerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModifier.swift; sourceTree = "<group>"; };
 		161AF7A128374C9D00322114 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		161AF7A32837508800322114 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		161AF7A82837522100322114 /* LinkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkingView.swift; sourceTree = "<group>"; };
+		161AF7AC2837523F00322114 /* LinkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkingViewModel.swift; sourceTree = "<group>"; };
 		163496152834234C007F4FAD /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		164264E82830550F00BF5369 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
@@ -204,6 +210,31 @@
 			path = Banner;
 			sourceTree = "<group>";
 		};
+		161AF7A5283751EE00322114 /* Linking */ = {
+			isa = PBXGroup;
+			children = (
+				161AF7A6283751F800322114 /* ViewModels */,
+				161AF7A7283751FB00322114 /* Views */,
+			);
+			path = Linking;
+			sourceTree = "<group>";
+		};
+		161AF7A6283751F800322114 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				161AF7AC2837523F00322114 /* LinkingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		161AF7A7283751FB00322114 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				161AF7A82837522100322114 /* LinkingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		164264E72830539100BF5369 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +336,7 @@
 				167C0C8C27FB4FAF00C99B43 /* Authentication */,
 				164264E72830539100BF5369 /* Schedule */,
 				169BBAA32836962800BF975B /* Event */,
+				161AF7A5283751EE00322114 /* Linking */,
 				168A5BEC27FA51DF00BA87FF /* Assets.xcassets */,
 				168A5C1727FA53ED00BA87FF /* GoogleService-Info.plist */,
 				168A5BEE27FA51DF00BA87FF /* Preview Content */,
@@ -381,6 +413,7 @@
 				164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */,
 				16A6D8E02833341E00D4F380 /* APIService.swift */,
 				169BBA9F2836891C00BF975B /* EventRepository.swift */,
+				161AF7A32837508800322114 /* UserRepository.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -629,6 +662,7 @@
 				164264E92830550F00BF5369 /* Schedule.swift in Sources */,
 				1687BB972810DB2800B512B8 /* MenuDetailView.swift in Sources */,
 				169BBAAD2836981000BF975B /* EventDetailView.swift in Sources */,
+				161AF7A42837508800322114 /* UserRepository.swift in Sources */,
 				16C5A7D127FA6000004BD0D5 /* TaskListViewModel.swift in Sources */,
 				16D7712128020D14007E9424 /* Date.swift in Sources */,
 				164795E72835DD9F00C95BC3 /* AddUserModels.swift in Sources */,
@@ -645,11 +679,13 @@
 				167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */,
 				161AF7962837350A00322114 /* AppView.swift in Sources */,
 				163496162834234C007F4FAD /* Debouncer.swift in Sources */,
+				161AF7A92837522100322114 /* LinkingView.swift in Sources */,
 				169BBAA02836891C00BF975B /* EventRepository.swift in Sources */,
 				168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */,
 				167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */,
 				16D7711E28020737007E9424 /* TaskDetailView.swift in Sources */,
 				1687BB952810DB2100B512B8 /* MenuCellView.swift in Sources */,
+				161AF7AD2837523F00322114 /* LinkingViewModel.swift in Sources */,
 				164795E128352CC100C95BC3 /* LinkModels.swift in Sources */,
 				167C0C9527FBF35900C99B43 /* SignInView.swift in Sources */,
 				169BBAAB2836980700BF975B /* EventCellView.swift in Sources */,

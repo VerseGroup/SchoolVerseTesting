@@ -97,7 +97,7 @@ class APIService: ObservableObject {
             .responseDecodable(of: LinkResponse.self) { response in
                 debugPrint("link response: \(response.description)")
                 self.linkStatus = response.value?.message
-                self.scrapeException = response.value?.exception
+                self.linkException = response.value?.exception
             }
     }
     

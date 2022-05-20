@@ -50,12 +50,28 @@ struct MoreView: View {
                 }
                 
                 NavigationLink {
-                    
+                    AccountView()
                 } label: {
                     VStack {
                         Image(systemName: "person.text.rectangle")
                             .font(.largeTitle)
                         Text("Account")
+                            .font(.title2)
+                    }
+                    .foregroundColor(Color.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.purple)
+                    .cornerRadius(10)
+                }
+                
+                NavigationLink {
+                    LinkingView()
+                } label: {
+                    VStack {
+                        Image(systemName: "link.badge.plus")
+                            .font(.largeTitle)
+                        Text("Linking")
                             .font(.title2)
                     }
                     .foregroundColor(Color.white)
