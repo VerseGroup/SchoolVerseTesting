@@ -72,6 +72,7 @@ struct ScheduleView: View {
             }
         }
         .padding()
+        .navigationTitle("Schedule")
     }
 }
 

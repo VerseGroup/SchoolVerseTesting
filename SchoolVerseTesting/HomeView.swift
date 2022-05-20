@@ -8,58 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var show: Bool = false
     var body: some View {
-        NavigationView {
-            VStack() {
-                HStack {
-                    Spacer()
-                }
-                
-                Text("Welcome to SchoolVerse!")
-                
-                HStack(spacing: 50) {
-                    NavigationLink {
-                        TasksView()
-                    } label: {
-                        Text("Tasks")
-                            .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color.purple)
-                            .cornerRadius(5)
-                    }
-                    
-                    NavigationLink {
-                        MenusView()
-                    } label: {
-                        Text("Menus")
-                            .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color.purple)
-                            .cornerRadius(5)
-                    }
-                    
-                    NavigationLink {
-                        ScheduleView()
-                    } label: {
-                        Text("Schedule")
-                            .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color.purple)
-                            .cornerRadius(5)
-                    }
-                    
-                    NavigationLink {
-                        EventsView()
-                    } label: {
-                        Text("Events")
-                            .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color.purple)
-                            .cornerRadius(5)
-                    }
-                }
-            }
-            .navigationBarHidden(true)
+        VStack {
+            Text("Home")
         }
     }
     
