@@ -10,9 +10,7 @@
 		16075A4C2835DC3B00D56BFA /* PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16075A4B2835DC3B00D56BFA /* PeriodView.swift */; };
 		160A624528007763005AD088 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160A624428007763005AD088 /* RouterView.swift */; };
 		161AF78E2837331500322114 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF78D2837331500322114 /* TabBarView.swift */; };
-		161AF790283733B400322114 /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF78F283733B400322114 /* TabBarContainerView.swift */; };
 		161AF792283733F400322114 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF791283733F400322114 /* TabBarItem.swift */; };
-		161AF7942837347200322114 /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7932837347200322114 /* TabBarItemsPreferenceKey.swift */; };
 		161AF7962837350A00322114 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7952837350A00322114 /* AppView.swift */; };
 		161AF7A02837415400322114 /* BannerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF79F2837415400322114 /* BannerModifier.swift */; };
 		161AF7A228374C9D00322114 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7A128374C9D00322114 /* MoreView.swift */; };
@@ -25,7 +23,6 @@
 		161AF7B92837C88500322114 /* SportsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7B82837C88500322114 /* SportsCellView.swift */; };
 		161AF7BB2837C89400322114 /* SportsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7BA2837C89400322114 /* SportsDetailView.swift */; };
 		161AF7BF2837D19400322114 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7BE2837D19400322114 /* HomeViewModel.swift */; };
-		1632E7F728387F8A004CC034 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1632E7F628387F8A004CC034 /* SwiftfulUI */; };
 		163496162834234C007F4FAD /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163496152834234C007F4FAD /* Debouncer.swift */; };
 		164264E92830550F00BF5369 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264E82830550F00BF5369 /* Schedule.swift */; };
 		164264EB2830A5CF00BF5369 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */; };
@@ -40,6 +37,9 @@
 		167C0C9127FBEE8A00C99B43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */; };
 		167C0C9527FBF35900C99B43 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9427FBF35900C99B43 /* SignInView.swift */; };
 		167C0C9727FBF35F00C99B43 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167C0C9627FBF35F00C99B43 /* SignUpView.swift */; };
+		1680ED64283C09FA00B8BF76 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1680ED63283C09FA00B8BF76 /* SwiftfulUI */; };
+		1680ED66283C0AD400B8BF76 /* TabBarItemViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1680ED65283C0AD400B8BF76 /* TabBarItemViewModifier.swift */; };
+		1680ED68283C0B0300B8BF76 /* TabBarViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1680ED67283C0B0300B8BF76 /* TabBarViewBuilder.swift */; };
 		1687BB932810DA8300B512B8 /* MenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB922810DA8300B512B8 /* MenusView.swift */; };
 		1687BB952810DB2100B512B8 /* MenuCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB942810DB2100B512B8 /* MenuCellView.swift */; };
 		1687BB972810DB2800B512B8 /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687BB962810DB2800B512B8 /* MenuDetailView.swift */; };
@@ -103,9 +103,7 @@
 		16075A4B2835DC3B00D56BFA /* PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodView.swift; sourceTree = "<group>"; };
 		160A624428007763005AD088 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		161AF78D2837331500322114 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		161AF78F283733B400322114 /* TabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
 		161AF791283733F400322114 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		161AF7932837347200322114 /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
 		161AF7952837350A00322114 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		161AF79F2837415400322114 /* BannerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModifier.swift; sourceTree = "<group>"; };
 		161AF7A128374C9D00322114 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
@@ -131,6 +129,8 @@
 		167C0C9027FBEE8A00C99B43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		167C0C9427FBF35900C99B43 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		167C0C9627FBF35F00C99B43 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1680ED65283C0AD400B8BF76 /* TabBarItemViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewModifier.swift; sourceTree = "<group>"; };
+		1680ED67283C0B0300B8BF76 /* TabBarViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewBuilder.swift; sourceTree = "<group>"; };
 		1687BB922810DA8300B512B8 /* MenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusView.swift; sourceTree = "<group>"; };
 		1687BB942810DB2100B512B8 /* MenuCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellView.swift; sourceTree = "<group>"; };
 		1687BB962810DB2800B512B8 /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				165F7D602833D37B0075B1A4 /* Alamofire in Frameworks */,
 				168A5C2127FA543C00BA87FF /* FirebaseFirestore in Frameworks */,
 				168A5C1F27FA543C00BA87FF /* FirebaseAuthCombine-Community in Frameworks */,
-				1632E7F728387F8A004CC034 /* SwiftfulUI in Frameworks */,
+				1680ED64283C09FA00B8BF76 /* SwiftfulUI in Frameworks */,
 				168A5C2527FA543C00BA87FF /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				168A5C2327FA543C00BA87FF /* FirebaseFirestoreCombine-Community in Frameworks */,
 				168A5C1D27FA543C00BA87FF /* FirebaseAuth in Frameworks */,
@@ -206,10 +206,10 @@
 		161AF78C283732CE00322114 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				161AF78F283733B400322114 /* TabBarContainerView.swift */,
 				161AF78D2837331500322114 /* TabBarView.swift */,
 				161AF791283733F400322114 /* TabBarItem.swift */,
-				161AF7932837347200322114 /* TabBarItemsPreferenceKey.swift */,
+				1680ED65283C0AD400B8BF76 /* TabBarItemViewModifier.swift */,
+				1680ED67283C0B0300B8BF76 /* TabBarViewBuilder.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -565,7 +565,7 @@
 				168A5C2227FA543C00BA87FF /* FirebaseFirestoreCombine-Community */,
 				168A5C2427FA543C00BA87FF /* FirebaseFirestoreSwift-Beta */,
 				165F7D5F2833D37B0075B1A4 /* Alamofire */,
-				1632E7F628387F8A004CC034 /* SwiftfulUI */,
+				1680ED63283C09FA00B8BF76 /* SwiftfulUI */,
 			);
 			productName = SchoolVerseTesting;
 			productReference = 168A5BE527FA51DD00BA87FF /* SchoolVerseTesting.app */;
@@ -642,7 +642,7 @@
 			packageReferences = (
 				168A5C1927FA543C00BA87FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				165F7D5E2833D37B0075B1A4 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				1632E7F528387F8A004CC034 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				1680ED62283C09FA00B8BF76 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
 			);
 			productRefGroup = 168A5BE627FA51DD00BA87FF /* Products */;
 			projectDirPath = "";
@@ -693,7 +693,6 @@
 				16E05855280EF2AF0050A555 /* MenuListViewModel.swift in Sources */,
 				16D7711A2802044F007E9424 /* MenuRepository.swift in Sources */,
 				16A6D8E12833341E00D4F380 /* APIService.swift in Sources */,
-				161AF790283733B400322114 /* TabBarContainerView.swift in Sources */,
 				16C5A7D927FAA05B004BD0D5 /* AddTaskView.swift in Sources */,
 				161AF7A02837415400322114 /* BannerModifier.swift in Sources */,
 				16D771162801D3DE007E9424 /* AccountView.swift in Sources */,
@@ -706,7 +705,6 @@
 				161AF7B72837C84000322114 /* SportsView.swift in Sources */,
 				16D7711C2802046D007E9424 /* Menu.swift in Sources */,
 				16C5A7CD27FA577E004BD0D5 /* SchoolTask.swift in Sources */,
-				161AF7942837347200322114 /* TabBarItemsPreferenceKey.swift in Sources */,
 				164264F52831BE7D00BF5369 /* ScheduleViewModel.swift in Sources */,
 				161AF7B92837C88500322114 /* SportsCellView.swift in Sources */,
 				161AF7B52837C64900322114 /* SportsRepository.swift in Sources */,
@@ -729,6 +727,7 @@
 				161AF78E2837331500322114 /* TabBarView.swift in Sources */,
 				16C5A7CF27FA5CEE004BD0D5 /* TaskRepository.swift in Sources */,
 				169BBAA9283697FA00BF975B /* EventsView.swift in Sources */,
+				1680ED66283C0AD400B8BF76 /* TabBarItemViewModifier.swift in Sources */,
 				161AF7BF2837D19400322114 /* HomeViewModel.swift in Sources */,
 				16D771182801F0F9007E9424 /* AddTaskViewModel.swift in Sources */,
 				169BBAA72836965C00BF975B /* EventListViewModel.swift in Sources */,
@@ -740,6 +739,7 @@
 				168A5BE927FA51DD00BA87FF /* SchoolVerseTestingApp.swift in Sources */,
 				167C0C8A27FB3B9A00C99B43 /* AuthenticationService.swift in Sources */,
 				16D7711E28020737007E9424 /* TaskDetailView.swift in Sources */,
+				1680ED68283C0B0300B8BF76 /* TabBarViewBuilder.swift in Sources */,
 				1687BB952810DB2100B512B8 /* MenuCellView.swift in Sources */,
 				161AF7AD2837523F00322114 /* LinkingViewModel.swift in Sources */,
 				164795E128352CC100C95BC3 /* LinkModels.swift in Sources */,
@@ -1078,20 +1078,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1632E7F528387F8A004CC034 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		165F7D5E2833D37B0075B1A4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.6.1;
+			};
+		};
+		1680ED62283C09FA00B8BF76 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 		168A5C1927FA543C00BA87FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -1105,15 +1105,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1632E7F628387F8A004CC034 /* SwiftfulUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1632E7F528387F8A004CC034 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
-			productName = SwiftfulUI;
-		};
 		165F7D5F2833D37B0075B1A4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 165F7D5E2833D37B0075B1A4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		1680ED63283C09FA00B8BF76 /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1680ED62283C09FA00B8BF76 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
 		};
 		168A5C1A27FA543C00BA87FF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
