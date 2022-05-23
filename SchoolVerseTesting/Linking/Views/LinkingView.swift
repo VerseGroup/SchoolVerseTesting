@@ -26,6 +26,7 @@ struct LinkingView: View {
                 
                 TextField("Username", text: $username)
                     .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
                 SecureField("Password", text: $password)
                 
                 Button {

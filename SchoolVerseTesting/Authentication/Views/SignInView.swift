@@ -18,6 +18,7 @@ struct SignInView: View {
             Form {
                 TextField("Enter email", text: $creds.email)
                     .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
                     .keyboardType(.emailAddress)
                     .textContentType(.emailAddress)
                 SecureField("Enter password", text: $creds.password)
