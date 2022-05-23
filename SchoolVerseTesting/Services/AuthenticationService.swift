@@ -41,7 +41,7 @@ class AuthenticationService: ObservableObject {
         
         // waits 5 seconds after errorMessage is changed to erase the errorMessage
         $errorMessage
-            .debounce(for: .seconds(5), scheduler: RunLoop.main)
+            .debounce(for: .seconds(1), scheduler: RunLoop.main)
             .sink { _ in
                 self.errorMessage = nil
             }

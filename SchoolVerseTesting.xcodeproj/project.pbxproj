@@ -25,6 +25,7 @@
 		161AF7B92837C88500322114 /* SportsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7B82837C88500322114 /* SportsCellView.swift */; };
 		161AF7BB2837C89400322114 /* SportsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7BA2837C89400322114 /* SportsDetailView.swift */; };
 		161AF7BF2837D19400322114 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AF7BE2837D19400322114 /* HomeViewModel.swift */; };
+		1632E7F728387F8A004CC034 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1632E7F628387F8A004CC034 /* SwiftfulUI */; };
 		163496162834234C007F4FAD /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163496152834234C007F4FAD /* Debouncer.swift */; };
 		164264E92830550F00BF5369 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264E82830550F00BF5369 /* Schedule.swift */; };
 		164264EB2830A5CF00BF5369 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164264EA2830A5CF00BF5369 /* ScheduleRepository.swift */; };
@@ -178,6 +179,7 @@
 				165F7D602833D37B0075B1A4 /* Alamofire in Frameworks */,
 				168A5C2127FA543C00BA87FF /* FirebaseFirestore in Frameworks */,
 				168A5C1F27FA543C00BA87FF /* FirebaseAuthCombine-Community in Frameworks */,
+				1632E7F728387F8A004CC034 /* SwiftfulUI in Frameworks */,
 				168A5C2527FA543C00BA87FF /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				168A5C2327FA543C00BA87FF /* FirebaseFirestoreCombine-Community in Frameworks */,
 				168A5C1D27FA543C00BA87FF /* FirebaseAuth in Frameworks */,
@@ -563,6 +565,7 @@
 				168A5C2227FA543C00BA87FF /* FirebaseFirestoreCombine-Community */,
 				168A5C2427FA543C00BA87FF /* FirebaseFirestoreSwift-Beta */,
 				165F7D5F2833D37B0075B1A4 /* Alamofire */,
+				1632E7F628387F8A004CC034 /* SwiftfulUI */,
 			);
 			productName = SchoolVerseTesting;
 			productReference = 168A5BE527FA51DD00BA87FF /* SchoolVerseTesting.app */;
@@ -639,6 +642,7 @@
 			packageReferences = (
 				168A5C1927FA543C00BA87FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				165F7D5E2833D37B0075B1A4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1632E7F528387F8A004CC034 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
 			);
 			productRefGroup = 168A5BE627FA51DD00BA87FF /* Products */;
 			projectDirPath = "";
@@ -1074,6 +1078,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1632E7F528387F8A004CC034 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		165F7D5E2833D37B0075B1A4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -1093,6 +1105,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1632E7F628387F8A004CC034 /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1632E7F528387F8A004CC034 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
 		165F7D5F2833D37B0075B1A4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 165F7D5E2833D37B0075B1A4 /* XCRemoteSwiftPackageReference "Alamofire" */;
