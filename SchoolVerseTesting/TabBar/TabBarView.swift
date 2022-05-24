@@ -97,6 +97,7 @@ extension TabBarView {
                 }
             }
         )
+        .contentShape(Rectangle())
     }
     
     private var tabBarVersion2: some View {
